@@ -1,0 +1,11 @@
+language: objective-c
+osx_image: xcode8.3
+
+before_install:
+    - rvm install 2.2.0
+
+script:
+    - bundle exec fastlane test
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash) -J 'TextWiki'
