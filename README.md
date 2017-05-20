@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/dvor/TextWiki.svg?branch=develop)](https://travis-ci.org/dvor/TextWiki) [![codecov](https://codecov.io/gh/dvor/TextWiki/branch/develop/graph/badge.svg)](https://codecov.io/gh/dvor/TextWiki)
+
 Wiki for iOS inspired by [Vimwiki](https://vimwiki.github.io/).
 
 ## Contact
