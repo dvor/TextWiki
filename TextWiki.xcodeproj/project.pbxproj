@@ -1,0 +1,506 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		115587FE1ED042C000BC6EB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115587FD1ED042C000BC6EB7 /* AppDelegate.swift */; };
+		115588001ED042C000BC6EB7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115587FF1ED042C000BC6EB7 /* ViewController.swift */; };
+		115588031ED042C000BC6EB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 115588011ED042C000BC6EB7 /* Main.storyboard */; };
+		115588051ED042C000BC6EB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 115588041ED042C000BC6EB7 /* Assets.xcassets */; };
+		115588081ED042C000BC6EB7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 115588061ED042C000BC6EB7 /* LaunchScreen.storyboard */; };
+		115588131ED042C000BC6EB7 /* TextWikiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115588121ED042C000BC6EB7 /* TextWikiTests.swift */; };
+		3B3142AEADCCFCDD2F83E9D1 /* Pods_TextWiki.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9A05E4AD8FFBEDCA6AC3ADD /* Pods_TextWiki.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1155880F1ED042C000BC6EB7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 115587F21ED042C000BC6EB7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 115587F91ED042C000BC6EB7;
+			remoteInfo = TextWiki;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0B9CE19A1EC3116E4F42843C /* Pods-TextWiki.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextWiki.release.xcconfig"; path = "Pods/Target Support Files/Pods-TextWiki/Pods-TextWiki.release.xcconfig"; sourceTree = "<group>"; };
+		115587FA1ED042C000BC6EB7 /* TextWiki.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TextWiki.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		115587FD1ED042C000BC6EB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		115587FF1ED042C000BC6EB7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		115588021ED042C000BC6EB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		115588041ED042C000BC6EB7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		115588071ED042C000BC6EB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		115588091ED042C000BC6EB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1155880E1ED042C000BC6EB7 /* TextWikiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TextWikiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		115588121ED042C000BC6EB7 /* TextWikiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextWikiTests.swift; sourceTree = "<group>"; };
+		115588141ED042C000BC6EB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A9A05E4AD8FFBEDCA6AC3ADD /* Pods_TextWiki.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TextWiki.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2E7EBB1E11F7E57142FBDD3 /* Pods-TextWiki.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextWiki.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TextWiki/Pods-TextWiki.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		115587F71ED042C000BC6EB7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B3142AEADCCFCDD2F83E9D1 /* Pods_TextWiki.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1155880B1ED042C000BC6EB7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		115587F11ED042C000BC6EB7 = {
+			isa = PBXGroup;
+			children = (
+				115587FC1ED042C000BC6EB7 /* TextWiki */,
+				115588111ED042C000BC6EB7 /* TextWikiTests */,
+				115587FB1ED042C000BC6EB7 /* Products */,
+				70F72445E7FDCB6DAF8AE886 /* Pods */,
+				6AD75CD91F15C18E54A696B4 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		115587FB1ED042C000BC6EB7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				115587FA1ED042C000BC6EB7 /* TextWiki.app */,
+				1155880E1ED042C000BC6EB7 /* TextWikiTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		115587FC1ED042C000BC6EB7 /* TextWiki */ = {
+			isa = PBXGroup;
+			children = (
+				115587FD1ED042C000BC6EB7 /* AppDelegate.swift */,
+				115587FF1ED042C000BC6EB7 /* ViewController.swift */,
+				115588011ED042C000BC6EB7 /* Main.storyboard */,
+				115588041ED042C000BC6EB7 /* Assets.xcassets */,
+				115588061ED042C000BC6EB7 /* LaunchScreen.storyboard */,
+				115588091ED042C000BC6EB7 /* Info.plist */,
+			);
+			path = TextWiki;
+			sourceTree = "<group>";
+		};
+		115588111ED042C000BC6EB7 /* TextWikiTests */ = {
+			isa = PBXGroup;
+			children = (
+				115588121ED042C000BC6EB7 /* TextWikiTests.swift */,
+				115588141ED042C000BC6EB7 /* Info.plist */,
+			);
+			path = TextWikiTests;
+			sourceTree = "<group>";
+		};
+		6AD75CD91F15C18E54A696B4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A9A05E4AD8FFBEDCA6AC3ADD /* Pods_TextWiki.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		70F72445E7FDCB6DAF8AE886 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E2E7EBB1E11F7E57142FBDD3 /* Pods-TextWiki.debug.xcconfig */,
+				0B9CE19A1EC3116E4F42843C /* Pods-TextWiki.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		115587F91ED042C000BC6EB7 /* TextWiki */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 115588171ED042C000BC6EB7 /* Build configuration list for PBXNativeTarget "TextWiki" */;
+			buildPhases = (
+				2A695A26C6340ACDB5ECA8E2 /* [CP] Check Pods Manifest.lock */,
+				115587F61ED042C000BC6EB7 /* Sources */,
+				115587F71ED042C000BC6EB7 /* Frameworks */,
+				115587F81ED042C000BC6EB7 /* Resources */,
+				7FE6F7A2820A1284B0DE19D3 /* [CP] Embed Pods Frameworks */,
+				34C5B17579DA4CF9DCF2E42A /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TextWiki;
+			productName = TextWiki;
+			productReference = 115587FA1ED042C000BC6EB7 /* TextWiki.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1155880D1ED042C000BC6EB7 /* TextWikiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1155881A1ED042C000BC6EB7 /* Build configuration list for PBXNativeTarget "TextWikiTests" */;
+			buildPhases = (
+				1155880A1ED042C000BC6EB7 /* Sources */,
+				1155880B1ED042C000BC6EB7 /* Frameworks */,
+				1155880C1ED042C000BC6EB7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				115588101ED042C000BC6EB7 /* PBXTargetDependency */,
+			);
+			name = TextWikiTests;
+			productName = TextWikiTests;
+			productReference = 1155880E1ED042C000BC6EB7 /* TextWikiTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		115587F21ED042C000BC6EB7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Dmytro Vorobiov";
+				TargetAttributes = {
+					115587F91ED042C000BC6EB7 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = NHVF8NSG3J;
+						ProvisioningStyle = Automatic;
+					};
+					1155880D1ED042C000BC6EB7 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = NHVF8NSG3J;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 115587F91ED042C000BC6EB7;
+					};
+				};
+			};
+			buildConfigurationList = 115587F51ED042C000BC6EB7 /* Build configuration list for PBXProject "TextWiki" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 115587F11ED042C000BC6EB7;
+			productRefGroup = 115587FB1ED042C000BC6EB7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				115587F91ED042C000BC6EB7 /* TextWiki */,
+				1155880D1ED042C000BC6EB7 /* TextWikiTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		115587F81ED042C000BC6EB7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				115588081ED042C000BC6EB7 /* LaunchScreen.storyboard in Resources */,
+				115588051ED042C000BC6EB7 /* Assets.xcassets in Resources */,
+				115588031ED042C000BC6EB7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1155880C1ED042C000BC6EB7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2A695A26C6340ACDB5ECA8E2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		34C5B17579DA4CF9DCF2E42A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TextWiki/Pods-TextWiki-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7FE6F7A2820A1284B0DE19D3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TextWiki/Pods-TextWiki-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		115587F61ED042C000BC6EB7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				115588001ED042C000BC6EB7 /* ViewController.swift in Sources */,
+				115587FE1ED042C000BC6EB7 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1155880A1ED042C000BC6EB7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				115588131ED042C000BC6EB7 /* TextWikiTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		115588101ED042C000BC6EB7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 115587F91ED042C000BC6EB7 /* TextWiki */;
+			targetProxy = 1155880F1ED042C000BC6EB7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		115588011ED042C000BC6EB7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				115588021ED042C000BC6EB7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		115588061ED042C000BC6EB7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				115588071ED042C000BC6EB7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		115588151ED042C000BC6EB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		115588161ED042C000BC6EB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		115588181ED042C000BC6EB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E2E7EBB1E11F7E57142FBDD3 /* Pods-TextWiki.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = NHVF8NSG3J;
+				INFOPLIST_FILE = TextWiki/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.dvor.TextWiki;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		115588191ED042C000BC6EB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B9CE19A1EC3116E4F42843C /* Pods-TextWiki.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = NHVF8NSG3J;
+				INFOPLIST_FILE = TextWiki/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.dvor.TextWiki;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		1155881B1ED042C000BC6EB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = NHVF8NSG3J;
+				INFOPLIST_FILE = TextWikiTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.dvor.TextWikiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TextWiki.app/TextWiki";
+			};
+			name = Debug;
+		};
+		1155881C1ED042C000BC6EB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = NHVF8NSG3J;
+				INFOPLIST_FILE = TextWikiTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.dvor.TextWikiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TextWiki.app/TextWiki";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		115587F51ED042C000BC6EB7 /* Build configuration list for PBXProject "TextWiki" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				115588151ED042C000BC6EB7 /* Debug */,
+				115588161ED042C000BC6EB7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		115588171ED042C000BC6EB7 /* Build configuration list for PBXNativeTarget "TextWiki" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				115588181ED042C000BC6EB7 /* Debug */,
+				115588191ED042C000BC6EB7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1155881A1ED042C000BC6EB7 /* Build configuration list for PBXNativeTarget "TextWikiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1155881B1ED042C000BC6EB7 /* Debug */,
+				1155881C1ED042C000BC6EB7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 115587F21ED042C000BC6EB7 /* Project object */;
+}
