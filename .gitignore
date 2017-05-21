@@ -39,3 +39,6 @@ fastlane/Preview.html
 fastlane/screenshots
 # scan temporary files
 fastlane/test_output
+
+# Generamba templates folder
+Templates

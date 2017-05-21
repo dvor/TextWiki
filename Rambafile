@@ -1,0 +1,33 @@
+### Headers settings
+company: Dmytro Vorobiov
+
+### Xcode project settings
+project_name: TextWiki
+xcodeproj_path: TextWiki.xcodeproj
+
+### Code generation settings section
+# The main project target name
+project_targets: [TextWiki, TextWikiTests]
+
+# The file path for new modules
+project_file_path: TextWiki/Modules
+
+# The Xcode group path to new modules
+project_group_path: TextWiki/Modules
+
+### Tests generation settings section
+# The tests target name
+test_target: TextWikiTests
+
+# The file path for new tests
+test_file_path: TextWikiTests/Modules
+
+# The Xcode group path to new tests
+test_group_path: TextWikiTests/Modules
+
+### Dependencies settings section
+podfile_path: Podfile
+
+### Templates
+templates:
+- {name: textwiki_viper, local: template_textwiki_viper}
