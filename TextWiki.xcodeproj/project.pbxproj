@@ -14,6 +14,7 @@
 		115588081ED042C000BC6EB7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 115588061ED042C000BC6EB7 /* LaunchScreen.storyboard */; };
 		115588131ED042C000BC6EB7 /* TextWikiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115588121ED042C000BC6EB7 /* TextWikiTests.swift */; };
 		3B3142AEADCCFCDD2F83E9D1 /* Pods_TextWiki.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9A05E4AD8FFBEDCA6AC3ADD /* Pods_TextWiki.framework */; };
+		A10F963E30046869B9FE2024 /* Pods_TextWikiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F930A46F2FAAB446CC8A918E /* Pods_TextWikiTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +39,11 @@
 		1155880E1ED042C000BC6EB7 /* TextWikiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TextWikiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		115588121ED042C000BC6EB7 /* TextWikiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextWikiTests.swift; sourceTree = "<group>"; };
 		115588141ED042C000BC6EB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C467CBB3CEC321C21085DBF /* Pods-TextWikiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextWikiTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TextWikiTests/Pods-TextWikiTests.release.xcconfig"; sourceTree = "<group>"; };
+		A4350B33C275E23D1798EDAE /* Pods-TextWikiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextWikiTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TextWikiTests/Pods-TextWikiTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A9A05E4AD8FFBEDCA6AC3ADD /* Pods_TextWiki.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TextWiki.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2E7EBB1E11F7E57142FBDD3 /* Pods-TextWiki.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextWiki.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TextWiki/Pods-TextWiki.debug.xcconfig"; sourceTree = "<group>"; };
+		F930A46F2FAAB446CC8A918E /* Pods_TextWikiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TextWikiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A10F963E30046869B9FE2024 /* Pods_TextWikiTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				A9A05E4AD8FFBEDCA6AC3ADD /* Pods_TextWiki.framework */,
+				F930A46F2FAAB446CC8A918E /* Pods_TextWikiTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -116,6 +122,8 @@
 			children = (
 				E2E7EBB1E11F7E57142FBDD3 /* Pods-TextWiki.debug.xcconfig */,
 				0B9CE19A1EC3116E4F42843C /* Pods-TextWiki.release.xcconfig */,
+				A4350B33C275E23D1798EDAE /* Pods-TextWikiTests.debug.xcconfig */,
+				2C467CBB3CEC321C21085DBF /* Pods-TextWikiTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -147,9 +155,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1155881A1ED042C000BC6EB7 /* Build configuration list for PBXNativeTarget "TextWikiTests" */;
 			buildPhases = (
+				8A44D5BA1F13D20141720ABA /* [CP] Check Pods Manifest.lock */,
 				1155880A1ED042C000BC6EB7 /* Sources */,
 				1155880B1ED042C000BC6EB7 /* Frameworks */,
 				1155880C1ED042C000BC6EB7 /* Resources */,
+				33A6744F9AD020FD7F1E5971 /* [CP] Embed Pods Frameworks */,
+				25DD0571EB38092DDE2271EF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -224,6 +235,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		25DD0571EB38092DDE2271EF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TextWikiTests/Pods-TextWikiTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		2A695A26C6340ACDB5ECA8E2 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -237,6 +263,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		33A6744F9AD020FD7F1E5971 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TextWikiTests/Pods-TextWikiTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		34C5B17579DA4CF9DCF2E42A /* [CP] Copy Pods Resources */ = {
@@ -267,6 +308,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TextWiki/Pods-TextWiki-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8A44D5BA1F13D20141720ABA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -444,8 +500,8 @@
 		};
 		1155881B1ED042C000BC6EB7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A4350B33C275E23D1798EDAE /* Pods-TextWikiTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = NHVF8NSG3J;
 				INFOPLIST_FILE = TextWikiTests/Info.plist;
@@ -459,8 +515,8 @@
 		};
 		1155881C1ED042C000BC6EB7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C467CBB3CEC321C21085DBF /* Pods-TextWikiTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = NHVF8NSG3J;
 				INFOPLIST_FILE = TextWikiTests/Info.plist;
@@ -491,6 +547,7 @@
 				115588191ED042C000BC6EB7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1155881A1ED042C000BC6EB7 /* Build configuration list for PBXNativeTarget "TextWikiTests" */ = {
 			isa = XCConfigurationList;
@@ -499,6 +556,7 @@
 				1155881C1ED042C000BC6EB7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
