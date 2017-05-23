@@ -9,7 +9,7 @@
 import UIKit
 import SnapKit
 
-class {{ module_info.name }}ViewController: UIViewController, {{module_info.name}}ViewInput {
+class {{ module_info.name }}ViewController: UIViewController {
     var output: {{ module_info.name }}ViewOutput!
 
     override func viewDidLoad() {
@@ -21,6 +21,8 @@ class {{ module_info.name }}ViewController: UIViewController, {{module_info.name
     }
 }
 
+extension {{ module_info.name }}ViewController: {{module_info.name}}ViewInput  {
+}
 
 extension {{ module_info.name }}ViewController {
     func createSubviews() {

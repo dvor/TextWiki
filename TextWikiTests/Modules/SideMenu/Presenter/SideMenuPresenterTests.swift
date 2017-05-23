@@ -1,15 +1,15 @@
 //
-//  {{ module_info.file_name }}
-//  {{ module_info.project_name }}
+//  SideMenuPresenterTests.swift
+//  TextWiki
 //
-//  Created by {{ developer.name }} on {{ date }}.
-//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//  Created by Dmytro Vorobiov on 23/05/2017.
+//  Copyright © 2017 Dmytro Vorobiov. All rights reserved.
 //
 
 import XCTest
 
-class {{ module_info.name }}PresenterTest: XCTestCase {
-    var presenter: {{ module_info.name }}Presenter!
+class SideMenuPresenterTest: XCTestCase {
+    var presenter: SideMenuPresenter!
     var interactor: MockInteractor!
     var router: MockRouter!
     var view: MockViewController!
@@ -21,7 +21,7 @@ class {{ module_info.name }}PresenterTest: XCTestCase {
         router = MockRouter()
         view = MockViewController()
 
-        presenter = {{ module_info.name }}Presenter()
+        presenter = SideMenuPresenter()
         presenter.interactor = interactor
         presenter.router = router
         presenter.view = view
@@ -32,15 +32,15 @@ class {{ module_info.name }}PresenterTest: XCTestCase {
         super.tearDown()
     }
 
-    class MockInteractor: {{ module_info.name }}InteractorInput {
+    class MockInteractor: SideMenuInteractorInput {
 
     }
 
-    class MockRouter: {{ module_info.name }}RouterInput {
+    class MockRouter: SideMenuRouterInput {
 
     }
 
-    class MockViewController: {{ module_info.name }}ViewInput {
+    class MockViewController: SideMenuViewInput {
 
     }
 }

@@ -6,7 +6,10 @@
 //  Copyright © 2017 Dmytro Vorobiov. All rights reserved.
 //
 
-class ApplicationInteractor: ApplicationInteractorInput {
+class ApplicationInteractor {
     weak var output: ApplicationInteractorOutput!
 
+}
+
+extension ApplicationInteractor: ApplicationInteractorInput {
 }

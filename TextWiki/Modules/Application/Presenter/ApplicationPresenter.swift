@@ -8,18 +8,26 @@
 
 import UIKit
 
-class ApplicationPresenter: ApplicationModuleInput, ApplicationViewOutput, ApplicationInteractorOutput {
+class ApplicationPresenter {
     weak var view: ApplicationViewInput!
     var interactor: ApplicationInteractorInput!
     var router: ApplicationRouterInput!
 
-    func viewIsReady() {
-        let c1 = UIViewController()
-        c1.view.backgroundColor = .red
-        let c2 = UIViewController()
-        c2.view.backgroundColor = .green
+    fileprivate lazy var sideMenu = SideMenuModuleFactory.create()
+    fileprivate lazy var wikiText = WikiTextModuleFactory.create()
+}
 
-        view.set(sideMenuView: c1)
-        view.set(mainView: c2)
+extension ApplicationPresenter: ApplicationModuleInput {
+}
+
+extension ApplicationPresenter: ApplicationViewOutput {
+    func viewIsReady() {
+        let navigation = UINavigationController(rootViewController: wikiText.viewController)
+
+        view.set(sideMenuView: sideMenu.viewController)
+        view.set(mainView: navigation)
     }
+}
+
+extension ApplicationPresenter: ApplicationInteractorOutput {
 }

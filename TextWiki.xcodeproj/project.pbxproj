@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		03231BCB8AB7C760C4B8D149 /* ApplicationInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = E216D15905722531D3C8ADB2 /* ApplicationInteractorInput.swift */; };
 		08E3E28332533B98BA0A57FE /* ApplicationModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AA397BBBA70E24EBBBDB7B /* ApplicationModuleInput.swift */; };
+		0F30E5663CE28E83DC7665BB /* SideMenuModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812AA1C8439744AC59014D64 /* SideMenuModuleInput.swift */; };
+		0F9176F8FC8261F1F8979FB7 /* WikiTextInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D17812A4D7173265955B3C0 /* WikiTextInteractor.swift */; };
 		115587FE1ED042C000BC6EB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115587FD1ED042C000BC6EB7 /* AppDelegate.swift */; };
 		115588001ED042C000BC6EB7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115587FF1ED042C000BC6EB7 /* ViewController.swift */; };
 		115588031ED042C000BC6EB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 115588011ED042C000BC6EB7 /* Main.storyboard */; };
@@ -17,29 +19,81 @@
 		115588131ED042C000BC6EB7 /* TextWikiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115588121ED042C000BC6EB7 /* TextWikiTests.swift */; };
 		1300C08A02F4F4661C6D8B5E /* ApplicationModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FD36F444DC24034F362183 /* ApplicationModuleFactory.swift */; };
 		14EF26B704C36F9A1F238B9B /* ApplicationViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3E43CB8F7C137A15A6CA50 /* ApplicationViewOutput.swift */; };
+		152FA5BF700A180AD1CB8E9E /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93E9BF4E55AEC9FFDA4CA02 /* SideMenuViewController.swift */; };
+		175C0CD1A98A411BFAA00267 /* WikiTextModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8080F89F166CA0B85F0F1F1 /* WikiTextModuleFactory.swift */; };
+		1897E5D2A55D914C6BA32580 /* SideMenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A732A866EEDC947B509165A6 /* SideMenuPresenter.swift */; };
+		19275D31A1A22960C4318EEC /* WikiTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC41159ECE9536EFBE89897 /* WikiTextViewController.swift */; };
+		1AF362F60FCF613C6003EECE /* SideMenuInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF37805AA60B24757CBC700 /* SideMenuInteractorInput.swift */; };
 		1DBEC7AA1B8A8F85C56A6568 /* ApplicationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC64C58A1D6AA5BA2F96760 /* ApplicationPresenter.swift */; };
+		1DDEE8AFA1CA2D6E94FC3B1A /* WikiTextInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D17812A4D7173265955B3C0 /* WikiTextInteractor.swift */; };
 		1F13C1CAA0E3416E5CF76F8D /* ApplicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873EA111459EAA969E6C0B51 /* ApplicationViewController.swift */; };
+		20A0AA1FFCCF360B7EF2575B /* WikiTextModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2905E9092577E658C050F3BD /* WikiTextModuleInput.swift */; };
+		22740D376A7AD50118087B3D /* WikiTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC41159ECE9536EFBE89897 /* WikiTextViewController.swift */; };
 		23190652320EF3E65909E5CE /* ApplicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873EA111459EAA969E6C0B51 /* ApplicationViewController.swift */; };
 		291882FEEBC5A23260A70A18 /* ApplicationViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3E43CB8F7C137A15A6CA50 /* ApplicationViewOutput.swift */; };
 		2A034309B4FBCC2BF92651F1 /* ApplicationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC64C58A1D6AA5BA2F96760 /* ApplicationPresenter.swift */; };
 		2D556A27325BFA674D1E7C6F /* ApplicationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EB3CD41698EDEC27D673E8 /* ApplicationRouter.swift */; };
+		35F569E53C5386A94B1D13B7 /* SideMenuViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023C9D64A5C6C76160DB4D59 /* SideMenuViewInput.swift */; };
+		3AAE0112652D922478D3B9F0 /* WikiTextModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8080F89F166CA0B85F0F1F1 /* WikiTextModuleFactory.swift */; };
 		3B3142AEADCCFCDD2F83E9D1 /* Pods_TextWiki.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9A05E4AD8FFBEDCA6AC3ADD /* Pods_TextWiki.framework */; };
 		3BA5EC85069368420F21E43C /* ApplicationViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9991BDA42ECD550CCB70DF60 /* ApplicationViewTests.swift */; };
+		419351250FE0657990FF4BEE /* WikiTextInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285D9C1A29F516EBA79DE046 /* WikiTextInteractorInput.swift */; };
+		4573A289DD47B3662C775A4B /* WikiTextRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B96E4259252277D40197522 /* WikiTextRouterInput.swift */; };
 		49BF004D5FE8DE452536D78C /* ApplicationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A837F3A7A120E5D7185DDF /* ApplicationInteractor.swift */; };
+		4A279536A2AC9C79FD03B4C9 /* WikiTextRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B96E4259252277D40197522 /* WikiTextRouterInput.swift */; };
 		4BFCDF84C99033E01989C4EE /* ApplicationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EB3CD41698EDEC27D673E8 /* ApplicationRouter.swift */; };
+		4DB2327F3D435D959C9BAB15 /* WikiTextInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A502F12A0AD75DA5E9882D7 /* WikiTextInteractorTests.swift */; };
+		4FF5C7DA4AAD9A3B77DBB49F /* WikiTextViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7572C038C10757A240BB24F5 /* WikiTextViewOutput.swift */; };
+		574721DB927FAB5AB7F337C1 /* SideMenuInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DC782450463413DE43854F /* SideMenuInteractorTests.swift */; };
+		59DB3B87B36C1604BE42C796 /* SideMenuInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DFB4C1585731762A00C211 /* SideMenuInteractorOutput.swift */; };
+		5CEFD9E95E211E6ECB3CE2D1 /* WikiTextModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2905E9092577E658C050F3BD /* WikiTextModuleInput.swift */; };
+		65694E21B07C0FD0F13CD8C2 /* WikiTextViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD924EBC8A9AB83973F488D /* WikiTextViewInput.swift */; };
+		6BB40365A0709A17F61943A0 /* SideMenuViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1AA9BB46BEDABA92A4CCF3 /* SideMenuViewTests.swift */; };
+		6C9A90206FC7F2FB1EAF5FAA /* SideMenuInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62912FF8E307AEEA42FDD41C /* SideMenuInteractor.swift */; };
 		72DB5F36405410766B1BFB2F /* ApplicationInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1862887C40FB0ACD7349853 /* ApplicationInteractorOutput.swift */; };
 		73A5875724A99480F9F3C1C6 /* ApplicationInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3427DE4A73E3D36B82D0B87F /* ApplicationInteractorTests.swift */; };
+		748B0CB4F500903CE024359E /* SideMenuPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93346CFDBE90D3F43EBA876F /* SideMenuPresenterTests.swift */; };
 		7B50B75FB5AE0B1D880641AD /* ApplicationInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1862887C40FB0ACD7349853 /* ApplicationInteractorOutput.swift */; };
+		7E0AE507F70BFB9F73938CEE /* WikiTextViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2078ED0D50B5BFEBABDD6AD2 /* WikiTextViewTests.swift */; };
+		879D7613ED83B694F17370C5 /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93E9BF4E55AEC9FFDA4CA02 /* SideMenuViewController.swift */; };
+		8A851FFF8BF720793912EE15 /* SideMenuModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4975C6B4D46E13893452449A /* SideMenuModuleFactory.swift */; };
+		8E7F0B34787E38A06B61DE84 /* WikiTextRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0F33F19CB588A40F9DFCE5 /* WikiTextRouter.swift */; };
+		907340846B64F1155B04D847 /* WikiTextPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E347F0266E411EC4D7E4A8D /* WikiTextPresenterTests.swift */; };
+		920BB6DCFDD58CB639494350 /* SideMenuRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3972E2C6009F182F4033EAE0 /* SideMenuRouterInput.swift */; };
 		933F1FC4C9B6080B33BAE9BF /* ApplicationRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE05D0EB204D8F2E3F15BDEA /* ApplicationRouterTests.swift */; };
+		93CB47B28971473412049EE9 /* WikiTextModuleFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3F95B8A9175B812B6D266D /* WikiTextModuleFactoryTests.swift */; };
+		9AD81C82046B881C1F2814DC /* SideMenuViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023C9D64A5C6C76160DB4D59 /* SideMenuViewInput.swift */; };
+		9BFD29302ABCA5FB1D2FBAF4 /* SideMenuViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324663E8BEFB8D3A22E101C6 /* SideMenuViewOutput.swift */; };
+		9C46A3020DD8D695CBC3AB15 /* SideMenuModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4975C6B4D46E13893452449A /* SideMenuModuleFactory.swift */; };
+		9D24987F1123D61CF3049394 /* SideMenuRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34F837018E7E98334458DD1 /* SideMenuRouter.swift */; };
 		A0C0B9C6E0592CEDFF67E9FE /* ApplicationViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD47764ACD7118007B4C9DC6 /* ApplicationViewInput.swift */; };
+		A0CC592AD7D640C0D97BF25E /* WikiTextInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D670A31BE952CB4F56BF9FCF /* WikiTextInteractorOutput.swift */; };
 		A10F963E30046869B9FE2024 /* Pods_TextWikiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F930A46F2FAAB446CC8A918E /* Pods_TextWikiTests.framework */; };
+		A11AFE1EAD2817476181636B /* SideMenuInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62912FF8E307AEEA42FDD41C /* SideMenuInteractor.swift */; };
+		A5A221DF8D6CD287F062D318 /* WikiTextRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0F33F19CB588A40F9DFCE5 /* WikiTextRouter.swift */; };
 		AA01F0E54CE709DF25AD54EF /* ApplicationRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815CF5FFD62D94F3100E75BB /* ApplicationRouterInput.swift */; };
+		ADE99777F17493FFB012BF08 /* SideMenuInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF37805AA60B24757CBC700 /* SideMenuInteractorInput.swift */; };
+		AEF28F03AACEF72F5CFBD6BA /* WikiTextInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D670A31BE952CB4F56BF9FCF /* WikiTextInteractorOutput.swift */; };
+		AFEE62E96B08050E6A0171F8 /* SideMenuModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812AA1C8439744AC59014D64 /* SideMenuModuleInput.swift */; };
+		B138317C3065A2028487664B /* SideMenuRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3972E2C6009F182F4033EAE0 /* SideMenuRouterInput.swift */; };
+		B58C86EE05AC446E1C4EB0EE /* WikiTextViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD924EBC8A9AB83973F488D /* WikiTextViewInput.swift */; };
+		B5C9D445610AB8FA62DC94DD /* WikiTextPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED021D633F96CD60E0913C2C /* WikiTextPresenter.swift */; };
+		B826716C561E16A77BFC4FE1 /* SideMenuModuleFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5A7DC1FB0A79AA2655C4B6 /* SideMenuModuleFactoryTests.swift */; };
 		C08C2843014EDB58A687CBEA /* ApplicationModuleFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64C28F8B0E7496A1BACE7BC /* ApplicationModuleFactoryTests.swift */; };
 		C352697689A5EF347F22823C /* ApplicationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A837F3A7A120E5D7185DDF /* ApplicationInteractor.swift */; };
 		C4229F34BFB857572999E6E4 /* ApplicationPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B070742F44C1D97376A05F6 /* ApplicationPresenterTests.swift */; };
+		D59AAADB825E0FD657CBD7B3 /* WikiTextPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED021D633F96CD60E0913C2C /* WikiTextPresenter.swift */; };
 		D9FC355D5D4EBB33F7342741 /* ApplicationModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FD36F444DC24034F362183 /* ApplicationModuleFactory.swift */; };
 		DC2D2A135B19E565AEF8FDE2 /* ApplicationRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815CF5FFD62D94F3100E75BB /* ApplicationRouterInput.swift */; };
+		DE168D36F256703016DE8E8B /* WikiTextInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285D9C1A29F516EBA79DE046 /* WikiTextInteractorInput.swift */; };
+		DFA5E73EE664F4A03941456B /* WikiTextRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DD68FC16ACFF539FC65FDD /* WikiTextRouterTests.swift */; };
+		E48C27E1B77E6CFB8EB3A9F1 /* WikiTextViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7572C038C10757A240BB24F5 /* WikiTextViewOutput.swift */; };
+		EA4882C858E332D1A079D4B9 /* SideMenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A732A866EEDC947B509165A6 /* SideMenuPresenter.swift */; };
+		EB91AC66CC60B6C66899BF2F /* SideMenuRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181BA6726F7747FE6DDC725E /* SideMenuRouterTests.swift */; };
 		EEA9066E52E44C4E6D3FD890 /* ApplicationInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = E216D15905722531D3C8ADB2 /* ApplicationInteractorInput.swift */; };
+		F027C06A063DDCB7F4290362 /* SideMenuInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DFB4C1585731762A00C211 /* SideMenuInteractorOutput.swift */; };
+		F537158D3C632BDA57E3715B /* SideMenuRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34F837018E7E98334458DD1 /* SideMenuRouter.swift */; };
+		F91451C5081F9209BEE18229 /* SideMenuViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324663E8BEFB8D3A22E101C6 /* SideMenuViewOutput.swift */; };
 		FBEAC9E30B7518D3E6CBD6B4 /* ApplicationModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AA397BBBA70E24EBBBDB7B /* ApplicationModuleInput.swift */; };
 		FD561965B148F6827EE9EBAA /* ApplicationViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD47764ACD7118007B4C9DC6 /* ApplicationViewInput.swift */; };
 /* End PBXBuildFile section */
@@ -55,9 +109,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		023C9D64A5C6C76160DB4D59 /* SideMenuViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SideMenuViewInput.swift; sourceTree = "<group>"; };
 		04AA397BBBA70E24EBBBDB7B /* ApplicationModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ApplicationModuleInput.swift; sourceTree = "<group>"; };
 		0B9CE19A1EC3116E4F42843C /* Pods-TextWiki.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextWiki.release.xcconfig"; path = "Pods/Target Support Files/Pods-TextWiki/Pods-TextWiki.release.xcconfig"; sourceTree = "<group>"; };
 		0BC64C58A1D6AA5BA2F96760 /* ApplicationPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ApplicationPresenter.swift; sourceTree = "<group>"; };
+		0CF37805AA60B24757CBC700 /* SideMenuInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SideMenuInteractorInput.swift; sourceTree = "<group>"; };
+		0E347F0266E411EC4D7E4A8D /* WikiTextPresenterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WikiTextPresenterTests.swift; sourceTree = "<group>"; };
 		115587FA1ED042C000BC6EB7 /* TextWiki.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TextWiki.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		115587FD1ED042C000BC6EB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		115587FF1ED042C000BC6EB7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -68,24 +125,53 @@
 		1155880E1ED042C000BC6EB7 /* TextWikiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TextWikiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		115588121ED042C000BC6EB7 /* TextWikiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextWikiTests.swift; sourceTree = "<group>"; };
 		115588141ED042C000BC6EB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		181BA6726F7747FE6DDC725E /* SideMenuRouterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SideMenuRouterTests.swift; sourceTree = "<group>"; };
+		1A0F33F19CB588A40F9DFCE5 /* WikiTextRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WikiTextRouter.swift; sourceTree = "<group>"; };
+		2078ED0D50B5BFEBABDD6AD2 /* WikiTextViewTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WikiTextViewTests.swift; sourceTree = "<group>"; };
+		285D9C1A29F516EBA79DE046 /* WikiTextInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WikiTextInteractorInput.swift; sourceTree = "<group>"; };
+		2905E9092577E658C050F3BD /* WikiTextModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WikiTextModuleInput.swift; sourceTree = "<group>"; };
+		2A502F12A0AD75DA5E9882D7 /* WikiTextInteractorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WikiTextInteractorTests.swift; sourceTree = "<group>"; };
 		2C467CBB3CEC321C21085DBF /* Pods-TextWikiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextWikiTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TextWikiTests/Pods-TextWikiTests.release.xcconfig"; sourceTree = "<group>"; };
+		324663E8BEFB8D3A22E101C6 /* SideMenuViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SideMenuViewOutput.swift; sourceTree = "<group>"; };
 		3427DE4A73E3D36B82D0B87F /* ApplicationInteractorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ApplicationInteractorTests.swift; sourceTree = "<group>"; };
+		3972E2C6009F182F4033EAE0 /* SideMenuRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SideMenuRouterInput.swift; sourceTree = "<group>"; };
+		42DFB4C1585731762A00C211 /* SideMenuInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SideMenuInteractorOutput.swift; sourceTree = "<group>"; };
 		47A837F3A7A120E5D7185DDF /* ApplicationInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ApplicationInteractor.swift; sourceTree = "<group>"; };
+		4975C6B4D46E13893452449A /* SideMenuModuleFactory.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SideMenuModuleFactory.swift; sourceTree = "<group>"; };
+		4D17812A4D7173265955B3C0 /* WikiTextInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WikiTextInteractor.swift; sourceTree = "<group>"; };
+		4E5A7DC1FB0A79AA2655C4B6 /* SideMenuModuleFactoryTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SideMenuModuleFactoryTests.swift; sourceTree = "<group>"; };
+		62912FF8E307AEEA42FDD41C /* SideMenuInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SideMenuInteractor.swift; sourceTree = "<group>"; };
+		6B96E4259252277D40197522 /* WikiTextRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WikiTextRouterInput.swift; sourceTree = "<group>"; };
+		7572C038C10757A240BB24F5 /* WikiTextViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WikiTextViewOutput.swift; sourceTree = "<group>"; };
+		76DD68FC16ACFF539FC65FDD /* WikiTextRouterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WikiTextRouterTests.swift; sourceTree = "<group>"; };
+		7E1AA9BB46BEDABA92A4CCF3 /* SideMenuViewTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SideMenuViewTests.swift; sourceTree = "<group>"; };
+		812AA1C8439744AC59014D64 /* SideMenuModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SideMenuModuleInput.swift; sourceTree = "<group>"; };
 		815CF5FFD62D94F3100E75BB /* ApplicationRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ApplicationRouterInput.swift; sourceTree = "<group>"; };
 		873EA111459EAA969E6C0B51 /* ApplicationViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ApplicationViewController.swift; sourceTree = "<group>"; };
+		93346CFDBE90D3F43EBA876F /* SideMenuPresenterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SideMenuPresenterTests.swift; sourceTree = "<group>"; };
+		97DC782450463413DE43854F /* SideMenuInteractorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SideMenuInteractorTests.swift; sourceTree = "<group>"; };
 		9991BDA42ECD550CCB70DF60 /* ApplicationViewTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ApplicationViewTests.swift; sourceTree = "<group>"; };
+		9A3F95B8A9175B812B6D266D /* WikiTextModuleFactoryTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WikiTextModuleFactoryTests.swift; sourceTree = "<group>"; };
 		9B070742F44C1D97376A05F6 /* ApplicationPresenterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ApplicationPresenterTests.swift; sourceTree = "<group>"; };
 		A4350B33C275E23D1798EDAE /* Pods-TextWikiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextWikiTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TextWikiTests/Pods-TextWikiTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A732A866EEDC947B509165A6 /* SideMenuPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SideMenuPresenter.swift; sourceTree = "<group>"; };
 		A9A05E4AD8FFBEDCA6AC3ADD /* Pods_TextWiki.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TextWiki.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB3E43CB8F7C137A15A6CA50 /* ApplicationViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ApplicationViewOutput.swift; sourceTree = "<group>"; };
+		ACC41159ECE9536EFBE89897 /* WikiTextViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WikiTextViewController.swift; sourceTree = "<group>"; };
+		B34F837018E7E98334458DD1 /* SideMenuRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SideMenuRouter.swift; sourceTree = "<group>"; };
+		BFD924EBC8A9AB83973F488D /* WikiTextViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WikiTextViewInput.swift; sourceTree = "<group>"; };
 		C0FD36F444DC24034F362183 /* ApplicationModuleFactory.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ApplicationModuleFactory.swift; sourceTree = "<group>"; };
 		CD47764ACD7118007B4C9DC6 /* ApplicationViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ApplicationViewInput.swift; sourceTree = "<group>"; };
 		D1862887C40FB0ACD7349853 /* ApplicationInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ApplicationInteractorOutput.swift; sourceTree = "<group>"; };
 		D4EB3CD41698EDEC27D673E8 /* ApplicationRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ApplicationRouter.swift; sourceTree = "<group>"; };
+		D670A31BE952CB4F56BF9FCF /* WikiTextInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WikiTextInteractorOutput.swift; sourceTree = "<group>"; };
+		D8080F89F166CA0B85F0F1F1 /* WikiTextModuleFactory.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WikiTextModuleFactory.swift; sourceTree = "<group>"; };
 		E216D15905722531D3C8ADB2 /* ApplicationInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ApplicationInteractorInput.swift; sourceTree = "<group>"; };
 		E2E7EBB1E11F7E57142FBDD3 /* Pods-TextWiki.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextWiki.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TextWiki/Pods-TextWiki.debug.xcconfig"; sourceTree = "<group>"; };
 		E64C28F8B0E7496A1BACE7BC /* ApplicationModuleFactoryTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ApplicationModuleFactoryTests.swift; sourceTree = "<group>"; };
+		ED021D633F96CD60E0913C2C /* WikiTextPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WikiTextPresenter.swift; sourceTree = "<group>"; };
 		F930A46F2FAAB446CC8A918E /* Pods_TextWikiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TextWikiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F93E9BF4E55AEC9FFDA4CA02 /* SideMenuViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
 		FE05D0EB204D8F2E3F15BDEA /* ApplicationRouterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ApplicationRouterTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -161,12 +247,62 @@
 			path = TextWikiTests;
 			sourceTree = "<group>";
 		};
+		1349719C2647372F06CFB148 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				97DC782450463413DE43854F /* SideMenuInteractorTests.swift */,
+			);
+			name = Interactor;
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		29B2A2C2002B0E1B0AA2CB82 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				6B96E4259252277D40197522 /* WikiTextRouterInput.swift */,
+				1A0F33F19CB588A40F9DFCE5 /* WikiTextRouter.swift */,
+			);
+			name = Router;
+			path = Router;
+			sourceTree = "<group>";
+		};
 		2E1C14D1ACEAB8B0D50DC9EE /* Factory */ = {
 			isa = PBXGroup;
 			children = (
 				E64C28F8B0E7496A1BACE7BC /* ApplicationModuleFactoryTests.swift */,
 			);
 			path = Factory;
+			sourceTree = "<group>";
+		};
+		2F667F71CD0C42120505248F /* SideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				E65B584CD3FC7535CF5801B3 /* View */,
+				4146747FFF669AC3A34AAF82 /* Presenter */,
+				A31DE9FA50B0636FA95345CE /* Interactor */,
+				89F44A89C0D5A8B60D869A19 /* Router */,
+				AFDBA5BB98455202BF6C25EF /* Factory */,
+			);
+			name = SideMenu;
+			path = SideMenu;
+			sourceTree = "<group>";
+		};
+		370404BC649C647D5F3A32D9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7E1AA9BB46BEDABA92A4CCF3 /* SideMenuViewTests.swift */,
+			);
+			name = View;
+			path = View;
+			sourceTree = "<group>";
+		};
+		375FB13B9323A38B129500B2 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				76DD68FC16ACFF539FC65FDD /* WikiTextRouterTests.swift */,
+			);
+			name = Router;
+			path = Router;
 			sourceTree = "<group>";
 		};
 		3FE1288819ACF831716053DB /* Interactor */ = {
@@ -177,6 +313,39 @@
 				47A837F3A7A120E5D7185DDF /* ApplicationInteractor.swift */,
 			);
 			path = Interactor;
+			sourceTree = "<group>";
+		};
+		40A539A3F0BB8D88D1F63103 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				2905E9092577E658C050F3BD /* WikiTextModuleInput.swift */,
+				ED021D633F96CD60E0913C2C /* WikiTextPresenter.swift */,
+			);
+			name = Presenter;
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		4146747FFF669AC3A34AAF82 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				812AA1C8439744AC59014D64 /* SideMenuModuleInput.swift */,
+				A732A866EEDC947B509165A6 /* SideMenuPresenter.swift */,
+			);
+			name = Presenter;
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		440FDB85004F192C6E5557C1 /* SideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				EDCA7E952EC5D5BC73713428 /* Factory */,
+				370404BC649C647D5F3A32D9 /* View */,
+				1349719C2647372F06CFB148 /* Interactor */,
+				EE5DBFDE32367ADE8E8F648B /* Presenter */,
+				5682E49612DA061ED0F5E021 /* Router */,
+			);
+			name = SideMenu;
+			path = SideMenu;
 			sourceTree = "<group>";
 		};
 		52573B3B550C0BA6C8429463 /* Application */ = {
@@ -191,10 +360,21 @@
 			path = Application;
 			sourceTree = "<group>";
 		};
+		5682E49612DA061ED0F5E021 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				181BA6726F7747FE6DDC725E /* SideMenuRouterTests.swift */,
+			);
+			name = Router;
+			path = Router;
+			sourceTree = "<group>";
+		};
 		597BEF3DE1AA2A5493602BA6 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
 				52573B3B550C0BA6C8429463 /* Application */,
+				2F667F71CD0C42120505248F /* SideMenu */,
+				C50806808C9DAEE0331DFE52 /* WikiText */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -212,6 +392,8 @@
 			isa = PBXGroup;
 			children = (
 				96F498446EAD2C9A2352D484 /* Application */,
+				440FDB85004F192C6E5557C1 /* SideMenu */,
+				97CEB2CB0AFA4DDC11E60B38 /* WikiText */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -232,6 +414,25 @@
 			children = (
 				9B070742F44C1D97376A05F6 /* ApplicationPresenterTests.swift */,
 			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		89F44A89C0D5A8B60D869A19 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				3972E2C6009F182F4033EAE0 /* SideMenuRouterInput.swift */,
+				B34F837018E7E98334458DD1 /* SideMenuRouter.swift */,
+			);
+			name = Router;
+			path = Router;
+			sourceTree = "<group>";
+		};
+		8E05AA935EE9A0BB383E7AFC /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				0E347F0266E411EC4D7E4A8D /* WikiTextPresenterTests.swift */,
+			);
+			name = Presenter;
 			path = Presenter;
 			sourceTree = "<group>";
 		};
@@ -256,12 +457,54 @@
 			path = Application;
 			sourceTree = "<group>";
 		};
+		97CEB2CB0AFA4DDC11E60B38 /* WikiText */ = {
+			isa = PBXGroup;
+			children = (
+				EFDC10D4995DD55F32AACD0E /* Factory */,
+				A0A879103A1788AD3AB53AB5 /* View */,
+				E00407777DB3150A200C017B /* Interactor */,
+				8E05AA935EE9A0BB383E7AFC /* Presenter */,
+				375FB13B9323A38B129500B2 /* Router */,
+			);
+			name = WikiText;
+			path = WikiText;
+			sourceTree = "<group>";
+		};
+		A0A879103A1788AD3AB53AB5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2078ED0D50B5BFEBABDD6AD2 /* WikiTextViewTests.swift */,
+			);
+			name = View;
+			path = View;
+			sourceTree = "<group>";
+		};
+		A31DE9FA50B0636FA95345CE /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				0CF37805AA60B24757CBC700 /* SideMenuInteractorInput.swift */,
+				42DFB4C1585731762A00C211 /* SideMenuInteractorOutput.swift */,
+				62912FF8E307AEEA42FDD41C /* SideMenuInteractor.swift */,
+			);
+			name = Interactor;
+			path = Interactor;
+			sourceTree = "<group>";
+		};
 		ACA1FA3C9BFA43A5964407E5 /* Router */ = {
 			isa = PBXGroup;
 			children = (
 				FE05D0EB204D8F2E3F15BDEA /* ApplicationRouterTests.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		AFDBA5BB98455202BF6C25EF /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				4975C6B4D46E13893452449A /* SideMenuModuleFactory.swift */,
+			);
+			name = Factory;
+			path = Factory;
 			sourceTree = "<group>";
 		};
 		B34FD8D66439737A025F1DF4 /* View */ = {
@@ -274,6 +517,41 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		BA490A305FCB69550F31EEE5 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				285D9C1A29F516EBA79DE046 /* WikiTextInteractorInput.swift */,
+				D670A31BE952CB4F56BF9FCF /* WikiTextInteractorOutput.swift */,
+				4D17812A4D7173265955B3C0 /* WikiTextInteractor.swift */,
+			);
+			name = Interactor;
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		C50806808C9DAEE0331DFE52 /* WikiText */ = {
+			isa = PBXGroup;
+			children = (
+				D50CF9846C8B41EA7134F99F /* View */,
+				40A539A3F0BB8D88D1F63103 /* Presenter */,
+				BA490A305FCB69550F31EEE5 /* Interactor */,
+				29B2A2C2002B0E1B0AA2CB82 /* Router */,
+				EE2EB7BE11237841D46E2312 /* Factory */,
+			);
+			name = WikiText;
+			path = WikiText;
+			sourceTree = "<group>";
+		};
+		D50CF9846C8B41EA7134F99F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BFD924EBC8A9AB83973F488D /* WikiTextViewInput.swift */,
+				7572C038C10757A240BB24F5 /* WikiTextViewOutput.swift */,
+				ACC41159ECE9536EFBE89897 /* WikiTextViewController.swift */,
+			);
+			name = View;
+			path = View;
+			sourceTree = "<group>";
+		};
 		DC2D1981EEE4C7BA3F23A9A5 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
@@ -283,11 +561,67 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		E00407777DB3150A200C017B /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				2A502F12A0AD75DA5E9882D7 /* WikiTextInteractorTests.swift */,
+			);
+			name = Interactor;
+			path = Interactor;
+			sourceTree = "<group>";
+		};
 		E5BAABED141666CD09C94CFB /* Factory */ = {
 			isa = PBXGroup;
 			children = (
 				C0FD36F444DC24034F362183 /* ApplicationModuleFactory.swift */,
 			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		E65B584CD3FC7535CF5801B3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				023C9D64A5C6C76160DB4D59 /* SideMenuViewInput.swift */,
+				324663E8BEFB8D3A22E101C6 /* SideMenuViewOutput.swift */,
+				F93E9BF4E55AEC9FFDA4CA02 /* SideMenuViewController.swift */,
+			);
+			name = View;
+			path = View;
+			sourceTree = "<group>";
+		};
+		EDCA7E952EC5D5BC73713428 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				4E5A7DC1FB0A79AA2655C4B6 /* SideMenuModuleFactoryTests.swift */,
+			);
+			name = Factory;
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		EE2EB7BE11237841D46E2312 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				D8080F89F166CA0B85F0F1F1 /* WikiTextModuleFactory.swift */,
+			);
+			name = Factory;
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		EE5DBFDE32367ADE8E8F648B /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				93346CFDBE90D3F43EBA876F /* SideMenuPresenterTests.swift */,
+			);
+			name = Presenter;
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		EFDC10D4995DD55F32AACD0E /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				9A3F95B8A9175B812B6D266D /* WikiTextModuleFactoryTests.swift */,
+			);
+			name = Factory;
 			path = Factory;
 			sourceTree = "<group>";
 		};
@@ -516,6 +850,28 @@
 				DC2D2A135B19E565AEF8FDE2 /* ApplicationRouterInput.swift in Sources */,
 				2D556A27325BFA674D1E7C6F /* ApplicationRouter.swift in Sources */,
 				1300C08A02F4F4661C6D8B5E /* ApplicationModuleFactory.swift in Sources */,
+				9AD81C82046B881C1F2814DC /* SideMenuViewInput.swift in Sources */,
+				9BFD29302ABCA5FB1D2FBAF4 /* SideMenuViewOutput.swift in Sources */,
+				879D7613ED83B694F17370C5 /* SideMenuViewController.swift in Sources */,
+				0F30E5663CE28E83DC7665BB /* SideMenuModuleInput.swift in Sources */,
+				1897E5D2A55D914C6BA32580 /* SideMenuPresenter.swift in Sources */,
+				ADE99777F17493FFB012BF08 /* SideMenuInteractorInput.swift in Sources */,
+				F027C06A063DDCB7F4290362 /* SideMenuInteractorOutput.swift in Sources */,
+				A11AFE1EAD2817476181636B /* SideMenuInteractor.swift in Sources */,
+				920BB6DCFDD58CB639494350 /* SideMenuRouterInput.swift in Sources */,
+				F537158D3C632BDA57E3715B /* SideMenuRouter.swift in Sources */,
+				8A851FFF8BF720793912EE15 /* SideMenuModuleFactory.swift in Sources */,
+				B58C86EE05AC446E1C4EB0EE /* WikiTextViewInput.swift in Sources */,
+				4FF5C7DA4AAD9A3B77DBB49F /* WikiTextViewOutput.swift in Sources */,
+				22740D376A7AD50118087B3D /* WikiTextViewController.swift in Sources */,
+				5CEFD9E95E211E6ECB3CE2D1 /* WikiTextModuleInput.swift in Sources */,
+				D59AAADB825E0FD657CBD7B3 /* WikiTextPresenter.swift in Sources */,
+				DE168D36F256703016DE8E8B /* WikiTextInteractorInput.swift in Sources */,
+				A0CC592AD7D640C0D97BF25E /* WikiTextInteractorOutput.swift in Sources */,
+				1DDEE8AFA1CA2D6E94FC3B1A /* WikiTextInteractor.swift in Sources */,
+				4573A289DD47B3662C775A4B /* WikiTextRouterInput.swift in Sources */,
+				8E7F0B34787E38A06B61DE84 /* WikiTextRouter.swift in Sources */,
+				3AAE0112652D922478D3B9F0 /* WikiTextModuleFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -540,6 +896,38 @@
 				73A5875724A99480F9F3C1C6 /* ApplicationInteractorTests.swift in Sources */,
 				C4229F34BFB857572999E6E4 /* ApplicationPresenterTests.swift in Sources */,
 				933F1FC4C9B6080B33BAE9BF /* ApplicationRouterTests.swift in Sources */,
+				35F569E53C5386A94B1D13B7 /* SideMenuViewInput.swift in Sources */,
+				F91451C5081F9209BEE18229 /* SideMenuViewOutput.swift in Sources */,
+				152FA5BF700A180AD1CB8E9E /* SideMenuViewController.swift in Sources */,
+				AFEE62E96B08050E6A0171F8 /* SideMenuModuleInput.swift in Sources */,
+				EA4882C858E332D1A079D4B9 /* SideMenuPresenter.swift in Sources */,
+				1AF362F60FCF613C6003EECE /* SideMenuInteractorInput.swift in Sources */,
+				59DB3B87B36C1604BE42C796 /* SideMenuInteractorOutput.swift in Sources */,
+				6C9A90206FC7F2FB1EAF5FAA /* SideMenuInteractor.swift in Sources */,
+				B138317C3065A2028487664B /* SideMenuRouterInput.swift in Sources */,
+				9D24987F1123D61CF3049394 /* SideMenuRouter.swift in Sources */,
+				9C46A3020DD8D695CBC3AB15 /* SideMenuModuleFactory.swift in Sources */,
+				B826716C561E16A77BFC4FE1 /* SideMenuModuleFactoryTests.swift in Sources */,
+				6BB40365A0709A17F61943A0 /* SideMenuViewTests.swift in Sources */,
+				574721DB927FAB5AB7F337C1 /* SideMenuInteractorTests.swift in Sources */,
+				748B0CB4F500903CE024359E /* SideMenuPresenterTests.swift in Sources */,
+				EB91AC66CC60B6C66899BF2F /* SideMenuRouterTests.swift in Sources */,
+				65694E21B07C0FD0F13CD8C2 /* WikiTextViewInput.swift in Sources */,
+				E48C27E1B77E6CFB8EB3A9F1 /* WikiTextViewOutput.swift in Sources */,
+				19275D31A1A22960C4318EEC /* WikiTextViewController.swift in Sources */,
+				20A0AA1FFCCF360B7EF2575B /* WikiTextModuleInput.swift in Sources */,
+				B5C9D445610AB8FA62DC94DD /* WikiTextPresenter.swift in Sources */,
+				419351250FE0657990FF4BEE /* WikiTextInteractorInput.swift in Sources */,
+				AEF28F03AACEF72F5CFBD6BA /* WikiTextInteractorOutput.swift in Sources */,
+				0F9176F8FC8261F1F8979FB7 /* WikiTextInteractor.swift in Sources */,
+				4A279536A2AC9C79FD03B4C9 /* WikiTextRouterInput.swift in Sources */,
+				A5A221DF8D6CD287F062D318 /* WikiTextRouter.swift in Sources */,
+				175C0CD1A98A411BFAA00267 /* WikiTextModuleFactory.swift in Sources */,
+				93CB47B28971473412049EE9 /* WikiTextModuleFactoryTests.swift in Sources */,
+				7E0AE507F70BFB9F73938CEE /* WikiTextViewTests.swift in Sources */,
+				4DB2327F3D435D959C9BAB15 /* WikiTextInteractorTests.swift in Sources */,
+				907340846B64F1155B04D847 /* WikiTextPresenterTests.swift in Sources */,
+				DFA5E73EE664F4A03941456B /* WikiTextRouterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
