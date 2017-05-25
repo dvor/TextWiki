@@ -6,6 +6,7 @@ use_frameworks!
 
 def common_pods
     pod 'SnapKit'
+    pod 'LGSideMenuController'
 end
 
 target :TextWiki do

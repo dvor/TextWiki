@@ -1,12 +1,15 @@
 PODS:
+  - LGSideMenuController (2.1.0)
   - SnapKit (3.2.0)
 
 DEPENDENCIES:
+  - LGSideMenuController
   - SnapKit
 
 SPEC CHECKSUMS:
+  LGSideMenuController: 60877ccce8abde59ce2d086031817d5a85ea7882
   SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
 
-PODFILE CHECKSUM: bba285771059afc42426d15f802b5db6121152ba
+PODFILE CHECKSUM: 4a59cd45cce9e556a95c2b90d72250178dcc0ce9
 
 COCOAPODS: 1.2.1

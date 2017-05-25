@@ -1,21 +1,21 @@
 //
-//  {{ module_info.file_name }}
-//  {{ module_info.project_name }}
+//  ApplicationInteractorTests.swift
+//  TextWiki
 //
-//  Created by {{ developer.name }} on {{ date }}.
-//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//  Created by Dmytro Vorobiov on 23/05/2017.
+//  Copyright © 2017 Dmytro Vorobiov. All rights reserved.
 //
 
 import XCTest
 
-class {{ module_info.name }}InteractorTests: XCTestCase {
-    var interactor: {{ module_info.name }}Interactor!
-    var output: {{ module_info.name }}InteractorOutput!
+class ApplicationInteractorTests: XCTestCase {
+    var interactor: ApplicationInteractor!
+    var output: ApplicationInteractorOutput!
 
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
-        interactor = {{ module_info.name }}Interactor()
+        interactor = ApplicationInteractor()
 
         output = MockPresenter()
         interactor.output = output
@@ -28,7 +28,7 @@ class {{ module_info.name }}InteractorTests: XCTestCase {
         super.tearDown()
     }
 
-    class MockPresenter: {{ module_info.name }}InteractorOutput {
+    class MockPresenter: ApplicationInteractorOutput {
 
     }
 }
