@@ -12,11 +12,8 @@
 		0F30E5663CE28E83DC7665BB /* SideMenuModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812AA1C8439744AC59014D64 /* SideMenuModuleInput.swift */; };
 		0F9176F8FC8261F1F8979FB7 /* WikiTextInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D17812A4D7173265955B3C0 /* WikiTextInteractor.swift */; };
 		115587FE1ED042C000BC6EB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115587FD1ED042C000BC6EB7 /* AppDelegate.swift */; };
-		115588001ED042C000BC6EB7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115587FF1ED042C000BC6EB7 /* ViewController.swift */; };
-		115588031ED042C000BC6EB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 115588011ED042C000BC6EB7 /* Main.storyboard */; };
 		115588051ED042C000BC6EB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 115588041ED042C000BC6EB7 /* Assets.xcassets */; };
 		115588081ED042C000BC6EB7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 115588061ED042C000BC6EB7 /* LaunchScreen.storyboard */; };
-		115588131ED042C000BC6EB7 /* TextWikiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115588121ED042C000BC6EB7 /* TextWikiTests.swift */; };
 		1300C08A02F4F4661C6D8B5E /* ApplicationModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FD36F444DC24034F362183 /* ApplicationModuleFactory.swift */; };
 		14EF26B704C36F9A1F238B9B /* ApplicationViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3E43CB8F7C137A15A6CA50 /* ApplicationViewOutput.swift */; };
 		152FA5BF700A180AD1CB8E9E /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93E9BF4E55AEC9FFDA4CA02 /* SideMenuViewController.swift */; };
@@ -117,13 +114,10 @@
 		0E347F0266E411EC4D7E4A8D /* WikiTextPresenterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WikiTextPresenterTests.swift; sourceTree = "<group>"; };
 		115587FA1ED042C000BC6EB7 /* TextWiki.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TextWiki.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		115587FD1ED042C000BC6EB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		115587FF1ED042C000BC6EB7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		115588021ED042C000BC6EB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		115588041ED042C000BC6EB7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		115588071ED042C000BC6EB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		115588091ED042C000BC6EB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1155880E1ED042C000BC6EB7 /* TextWikiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TextWikiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		115588121ED042C000BC6EB7 /* TextWikiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextWikiTests.swift; sourceTree = "<group>"; };
 		115588141ED042C000BC6EB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		181BA6726F7747FE6DDC725E /* SideMenuRouterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SideMenuRouterTests.swift; sourceTree = "<group>"; };
 		1A0F33F19CB588A40F9DFCE5 /* WikiTextRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WikiTextRouter.swift; sourceTree = "<group>"; };
@@ -227,8 +221,6 @@
 			isa = PBXGroup;
 			children = (
 				115587FD1ED042C000BC6EB7 /* AppDelegate.swift */,
-				115587FF1ED042C000BC6EB7 /* ViewController.swift */,
-				115588011ED042C000BC6EB7 /* Main.storyboard */,
 				115588041ED042C000BC6EB7 /* Assets.xcassets */,
 				115588061ED042C000BC6EB7 /* LaunchScreen.storyboard */,
 				115588091ED042C000BC6EB7 /* Info.plist */,
@@ -240,7 +232,6 @@
 		115588111ED042C000BC6EB7 /* TextWikiTests */ = {
 			isa = PBXGroup;
 			children = (
-				115588121ED042C000BC6EB7 /* TextWikiTests.swift */,
 				115588141ED042C000BC6EB7 /* Info.plist */,
 				6BD436AD07C2D921E4F8A025 /* Modules */,
 			);
@@ -252,7 +243,6 @@
 			children = (
 				97DC782450463413DE43854F /* SideMenuInteractorTests.swift */,
 			);
-			name = Interactor;
 			path = Interactor;
 			sourceTree = "<group>";
 		};
@@ -262,7 +252,6 @@
 				6B96E4259252277D40197522 /* WikiTextRouterInput.swift */,
 				1A0F33F19CB588A40F9DFCE5 /* WikiTextRouter.swift */,
 			);
-			name = Router;
 			path = Router;
 			sourceTree = "<group>";
 		};
@@ -283,7 +272,6 @@
 				89F44A89C0D5A8B60D869A19 /* Router */,
 				AFDBA5BB98455202BF6C25EF /* Factory */,
 			);
-			name = SideMenu;
 			path = SideMenu;
 			sourceTree = "<group>";
 		};
@@ -292,7 +280,6 @@
 			children = (
 				7E1AA9BB46BEDABA92A4CCF3 /* SideMenuViewTests.swift */,
 			);
-			name = View;
 			path = View;
 			sourceTree = "<group>";
 		};
@@ -301,7 +288,6 @@
 			children = (
 				76DD68FC16ACFF539FC65FDD /* WikiTextRouterTests.swift */,
 			);
-			name = Router;
 			path = Router;
 			sourceTree = "<group>";
 		};
@@ -321,7 +307,6 @@
 				2905E9092577E658C050F3BD /* WikiTextModuleInput.swift */,
 				ED021D633F96CD60E0913C2C /* WikiTextPresenter.swift */,
 			);
-			name = Presenter;
 			path = Presenter;
 			sourceTree = "<group>";
 		};
@@ -331,7 +316,6 @@
 				812AA1C8439744AC59014D64 /* SideMenuModuleInput.swift */,
 				A732A866EEDC947B509165A6 /* SideMenuPresenter.swift */,
 			);
-			name = Presenter;
 			path = Presenter;
 			sourceTree = "<group>";
 		};
@@ -344,7 +328,6 @@
 				EE5DBFDE32367ADE8E8F648B /* Presenter */,
 				5682E49612DA061ED0F5E021 /* Router */,
 			);
-			name = SideMenu;
 			path = SideMenu;
 			sourceTree = "<group>";
 		};
@@ -365,7 +348,6 @@
 			children = (
 				181BA6726F7747FE6DDC725E /* SideMenuRouterTests.swift */,
 			);
-			name = Router;
 			path = Router;
 			sourceTree = "<group>";
 		};
@@ -423,7 +405,6 @@
 				3972E2C6009F182F4033EAE0 /* SideMenuRouterInput.swift */,
 				B34F837018E7E98334458DD1 /* SideMenuRouter.swift */,
 			);
-			name = Router;
 			path = Router;
 			sourceTree = "<group>";
 		};
@@ -432,7 +413,6 @@
 			children = (
 				0E347F0266E411EC4D7E4A8D /* WikiTextPresenterTests.swift */,
 			);
-			name = Presenter;
 			path = Presenter;
 			sourceTree = "<group>";
 		};
@@ -466,7 +446,6 @@
 				8E05AA935EE9A0BB383E7AFC /* Presenter */,
 				375FB13B9323A38B129500B2 /* Router */,
 			);
-			name = WikiText;
 			path = WikiText;
 			sourceTree = "<group>";
 		};
@@ -475,7 +454,6 @@
 			children = (
 				2078ED0D50B5BFEBABDD6AD2 /* WikiTextViewTests.swift */,
 			);
-			name = View;
 			path = View;
 			sourceTree = "<group>";
 		};
@@ -486,7 +464,6 @@
 				42DFB4C1585731762A00C211 /* SideMenuInteractorOutput.swift */,
 				62912FF8E307AEEA42FDD41C /* SideMenuInteractor.swift */,
 			);
-			name = Interactor;
 			path = Interactor;
 			sourceTree = "<group>";
 		};
@@ -503,7 +480,6 @@
 			children = (
 				4975C6B4D46E13893452449A /* SideMenuModuleFactory.swift */,
 			);
-			name = Factory;
 			path = Factory;
 			sourceTree = "<group>";
 		};
@@ -524,7 +500,6 @@
 				D670A31BE952CB4F56BF9FCF /* WikiTextInteractorOutput.swift */,
 				4D17812A4D7173265955B3C0 /* WikiTextInteractor.swift */,
 			);
-			name = Interactor;
 			path = Interactor;
 			sourceTree = "<group>";
 		};
@@ -537,7 +512,6 @@
 				29B2A2C2002B0E1B0AA2CB82 /* Router */,
 				EE2EB7BE11237841D46E2312 /* Factory */,
 			);
-			name = WikiText;
 			path = WikiText;
 			sourceTree = "<group>";
 		};
@@ -548,7 +522,6 @@
 				7572C038C10757A240BB24F5 /* WikiTextViewOutput.swift */,
 				ACC41159ECE9536EFBE89897 /* WikiTextViewController.swift */,
 			);
-			name = View;
 			path = View;
 			sourceTree = "<group>";
 		};
@@ -566,7 +539,6 @@
 			children = (
 				2A502F12A0AD75DA5E9882D7 /* WikiTextInteractorTests.swift */,
 			);
-			name = Interactor;
 			path = Interactor;
 			sourceTree = "<group>";
 		};
@@ -585,7 +557,6 @@
 				324663E8BEFB8D3A22E101C6 /* SideMenuViewOutput.swift */,
 				F93E9BF4E55AEC9FFDA4CA02 /* SideMenuViewController.swift */,
 			);
-			name = View;
 			path = View;
 			sourceTree = "<group>";
 		};
@@ -594,7 +565,6 @@
 			children = (
 				4E5A7DC1FB0A79AA2655C4B6 /* SideMenuModuleFactoryTests.swift */,
 			);
-			name = Factory;
 			path = Factory;
 			sourceTree = "<group>";
 		};
@@ -603,7 +573,6 @@
 			children = (
 				D8080F89F166CA0B85F0F1F1 /* WikiTextModuleFactory.swift */,
 			);
-			name = Factory;
 			path = Factory;
 			sourceTree = "<group>";
 		};
@@ -612,7 +581,6 @@
 			children = (
 				93346CFDBE90D3F43EBA876F /* SideMenuPresenterTests.swift */,
 			);
-			name = Presenter;
 			path = Presenter;
 			sourceTree = "<group>";
 		};
@@ -621,7 +589,6 @@
 			children = (
 				9A3F95B8A9175B812B6D266D /* WikiTextModuleFactoryTests.swift */,
 			);
-			name = Factory;
 			path = Factory;
 			sourceTree = "<group>";
 		};
@@ -726,7 +693,6 @@
 			files = (
 				115588081ED042C000BC6EB7 /* LaunchScreen.storyboard in Resources */,
 				115588051ED042C000BC6EB7 /* Assets.xcassets in Resources */,
-				115588031ED042C000BC6EB7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -837,7 +803,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				115588001ED042C000BC6EB7 /* ViewController.swift in Sources */,
 				115587FE1ED042C000BC6EB7 /* AppDelegate.swift in Sources */,
 				A0C0B9C6E0592CEDFF67E9FE /* ApplicationViewInput.swift in Sources */,
 				291882FEEBC5A23260A70A18 /* ApplicationViewOutput.swift in Sources */,
@@ -879,7 +844,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				115588131ED042C000BC6EB7 /* TextWikiTests.swift in Sources */,
 				FD561965B148F6827EE9EBAA /* ApplicationViewInput.swift in Sources */,
 				14EF26B704C36F9A1F238B9B /* ApplicationViewOutput.swift in Sources */,
 				23190652320EF3E65909E5CE /* ApplicationViewController.swift in Sources */,
@@ -942,14 +906,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		115588011ED042C000BC6EB7 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				115588021ED042C000BC6EB7 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		115588061ED042C000BC6EB7 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
