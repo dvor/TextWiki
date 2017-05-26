@@ -9,5 +9,5 @@
 import Foundation
 
 protocol WikiTextInteractorOutput: class {
-
+    func didLoadFile(text: String)
 }

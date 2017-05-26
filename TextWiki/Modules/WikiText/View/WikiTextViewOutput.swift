@@ -6,6 +6,9 @@
 //  Copyright © 2017 Dmytro Vorobiov. All rights reserved.
 //
 
+import Foundation
+
 protocol WikiTextViewOutput {
     func viewIsReady()
+    func willProcessEditing(string: String, range editedRange: NSRange, changeInLength delta: Int)
 }
