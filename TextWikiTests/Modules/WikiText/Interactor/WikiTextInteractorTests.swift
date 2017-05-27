@@ -29,6 +29,10 @@ class WikiTextInteractorTests: XCTestCase {
     }
 
     class MockPresenter: WikiTextInteractorOutput {
+        func didLoadFile(text: String) {
+        }
 
+        func didReload(parsedObjects: [ParsedObject], in range: NSRange) {
+        }
     }
 }

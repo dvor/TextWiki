@@ -33,7 +33,11 @@ class WikiTextPresenterTest: XCTestCase {
     }
 
     class MockInteractor: WikiTextInteractorInput {
+        func loadWikiFile() {
+        }
 
+        func textWasChanged(in string: String, in changedRange: NSRange) {
+        }
     }
 
     class MockRouter: WikiTextRouterInput {
@@ -41,6 +45,9 @@ class WikiTextPresenterTest: XCTestCase {
     }
 
     class MockViewController: WikiTextViewInput {
+        var text: String = ""
 
+        func set(styles: [WikiTextViewTextStyle], in range: NSRange) {
+        }
     }
 }
