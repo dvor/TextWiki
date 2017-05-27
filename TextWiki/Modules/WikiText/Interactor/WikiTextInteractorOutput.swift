@@ -10,4 +10,5 @@ import Foundation
 
 protocol WikiTextInteractorOutput: class {
     func didLoadFile(text: String)
+    func didReload(parsedObjects: [ParsedObject], in range: NSRange)
 }

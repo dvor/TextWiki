@@ -10,4 +10,5 @@ import Foundation
 
 protocol WikiTextInteractorInput {
     func loadWikiFile()
+    func reloadParsedObjects(in string: String, minimalRange: NSRange)
 }

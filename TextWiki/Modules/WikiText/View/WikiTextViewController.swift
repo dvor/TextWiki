@@ -65,14 +65,11 @@ extension WikiTextViewController: WikiTextViewInput  {
         }
     }
 
-    func set(textObjects: [WikiTextViewTextObject], in changedRange: NSRange) {
-        textView.textStorage.removeAttribute(NSForegroundColorAttributeName, range: changedRange)
+    func set(styles: [WikiTextViewTextStyle], in range: NSRange) {
+        textView.textStorage.removeAttribute(NSForegroundColorAttributeName, range: range)
 
-        for object in textObjects {
-            switch object.type {
-                case .link:
-                    textView.textStorage.addAttribute(NSForegroundColorAttributeName, value: UIColor.purple, range: object.range)
-            }
+        for style in styles {
+            textView.textStorage.addAttribute(NSForegroundColorAttributeName, value: style.color, range: style.range)
         }
     }
 }

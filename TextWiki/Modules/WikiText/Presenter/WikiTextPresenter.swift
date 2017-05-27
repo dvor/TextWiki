@@ -24,22 +24,23 @@ extension WikiTextPresenter: WikiTextViewOutput {
     }
 
     func willProcessEditing(string: String, range editedRange: NSRange, changeInLength delta: Int) {
-        let pattern = "\\[\\[.*\\]\\]"
-
-        let regex = try! NSRegularExpression(pattern: pattern, options: [])
-
-        let paragraphRange = (string as NSString).paragraphRange(for: editedRange)
-
-        let objects = regex.matches(in: string, options: [], range: paragraphRange).map {
-            WikiTextViewTextObject(type: .link, range: $0.range)
-        }
-
-        view.set(textObjects: objects, in: paragraphRange)
+        interactor.reloadParsedObjects(in: string, minimalRange: editedRange)
     }
 }
 
 extension WikiTextPresenter: WikiTextInteractorOutput {
     func didLoadFile(text: String) {
         view.text = text
+    }
+
+    func didReload(parsedObjects: [ParsedObject], in range: NSRange) {
+        let styles: [WikiTextViewTextStyle] = parsedObjects.map {
+            switch $0.type {
+                case .link:
+                    return WikiTextViewTextStyle(range: $0.range, color: .red)
+            }
+        }
+
+        view.set(styles: styles, in: range)
     }
 }

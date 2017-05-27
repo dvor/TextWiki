@@ -6,9 +6,16 @@
 //  Copyright © 2017 Dmytro Vorobiov. All rights reserved.
 //
 
+import Foundation
+
 class WikiTextInteractor {
     weak var output: WikiTextInteractorOutput!
 
+    fileprivate let parser: Parser
+
+    init(parser: Parser = VimwikiParser()) {
+        self.parser = parser
+    }
 }
 
 extension WikiTextInteractor: WikiTextInteractorInput {
@@ -40,5 +47,13 @@ extension WikiTextInteractor: WikiTextInteractorInput {
 ""
 
         output.didLoadFile(text: text)
+    }
+
+    func reloadParsedObjects(in string: String, minimalRange: NSRange) {
+        let paragraphRange = (string as NSString).paragraphRange(for: minimalRange)
+
+        let objects = parser.parse(string: string, range: paragraphRange)
+
+        output.didReload(parsedObjects: objects, in: paragraphRange)
     }
 }

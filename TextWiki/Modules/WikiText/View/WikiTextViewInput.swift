@@ -11,5 +11,5 @@ import Foundation
 protocol WikiTextViewInput: class {
     var text: String { get set }
 
-    func set(textObjects: [WikiTextViewTextObject], in changedRange: NSRange)
+    func set(styles: [WikiTextViewTextStyle], in range: NSRange)
 }
