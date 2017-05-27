@@ -32,8 +32,73 @@ class WikiTextPresenterTest: XCTestCase {
         super.tearDown()
     }
 
-    class MockInteractor: WikiTextInteractorInput {
+    func testViewIsReady() {
+        // when
+        presenter.viewIsReady()
 
+        // then
+        XCTAssertTrue(interactor.didLoadFileString)
+    }
+
+    func testWillProcessEditing() {
+        // before
+        let range = NSRange(location: 1, length: 2)
+
+        // when
+        presenter.willProcessEditing(string: "123", range: range, changeInLength: 1)
+
+        // then
+        XCTAssertEqual(interactor.textWasChangedString, "123")
+        XCTAssertEqual(interactor.textWasChangedRange, range)
+    }
+
+    func testDidLoadFile() {
+        // when
+        presenter.didLoadFile(text: "some text")
+
+        // then
+        XCTAssertEqual(view.text, "some text")
+    }
+
+    func testDidReloadParsedObjects() {
+        // before
+        let range = NSRange(location: 1, length: 2)
+        let range0 = NSRange(location: 2, length: 3)
+        let range1 = NSRange(location: 3, length: 4)
+
+        let parsedObjects = [
+            ParsedObject(type: .link, range: range0),
+            ParsedObject(type: .link, range: range1),
+        ]
+
+        // when
+        presenter.didReload(parsedObjects: parsedObjects, in: range)
+
+        // then
+        XCTAssertEqual(view.setStyles.count, 2)
+        XCTAssertEqual(view.setStyles[0].range, range0)
+        XCTAssertEqual(view.setStyles[0].color, .red)
+        XCTAssertEqual(view.setStyles[1].range, range1)
+        XCTAssertEqual(view.setStyles[1].color, .red)
+
+        XCTAssertEqual(view.setStylesRange, range)
+    }
+}
+
+extension WikiTextPresenterTest {
+    class MockInteractor: WikiTextInteractorInput {
+        var didLoadFileString = false
+        var textWasChangedString: String!
+        var textWasChangedRange: NSRange!
+
+        func loadWikiFile() {
+            didLoadFileString = true
+        }
+
+        func textWasChanged(in string: String, in changedRange: NSRange) {
+            textWasChangedString = string
+            textWasChangedRange = changedRange
+        }
     }
 
     class MockRouter: WikiTextRouterInput {
@@ -41,6 +106,14 @@ class WikiTextPresenterTest: XCTestCase {
     }
 
     class MockViewController: WikiTextViewInput {
+        var text: String = ""
 
+        var setStyles: [WikiTextViewTextStyle]!
+        var setStylesRange: NSRange!
+
+        func set(styles: [WikiTextViewTextStyle], in range: NSRange) {
+            setStyles = styles
+            setStylesRange = range
+        }
     }
 }

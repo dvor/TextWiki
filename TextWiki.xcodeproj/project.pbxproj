@@ -11,12 +11,18 @@
 		08E3E28332533B98BA0A57FE /* ApplicationModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AA397BBBA70E24EBBBDB7B /* ApplicationModuleInput.swift */; };
 		0F30E5663CE28E83DC7665BB /* SideMenuModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812AA1C8439744AC59014D64 /* SideMenuModuleInput.swift */; };
 		0F9176F8FC8261F1F8979FB7 /* WikiTextInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D17812A4D7173265955B3C0 /* WikiTextInteractor.swift */; };
+		115098D61ED9862C00752602 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115098D51ED9862C00752602 /* Parser.swift */; };
+		115098D71ED9862C00752602 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115098D51ED9862C00752602 /* Parser.swift */; };
+		115098D91ED986C200752602 /* ParsedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115098D81ED986C200752602 /* ParsedObject.swift */; };
+		115098DA1ED986C200752602 /* ParsedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115098D81ED986C200752602 /* ParsedObject.swift */; };
+		115098DC1ED9870300752602 /* VimwikiParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115098DB1ED9870300752602 /* VimwikiParser.swift */; };
+		115098DD1ED9870300752602 /* VimwikiParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115098DB1ED9870300752602 /* VimwikiParser.swift */; };
+		115098DF1ED9925500752602 /* WikiTextViewTextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115098DE1ED9925500752602 /* WikiTextViewTextStyle.swift */; };
+		115098E01ED9925500752602 /* WikiTextViewTextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115098DE1ED9925500752602 /* WikiTextViewTextStyle.swift */; };
+		115098E31ED9A8A600752602 /* NSRangeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115098E21ED9A8A600752602 /* NSRangeExtension.swift */; };
 		115587FE1ED042C000BC6EB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115587FD1ED042C000BC6EB7 /* AppDelegate.swift */; };
-		115588001ED042C000BC6EB7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115587FF1ED042C000BC6EB7 /* ViewController.swift */; };
-		115588031ED042C000BC6EB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 115588011ED042C000BC6EB7 /* Main.storyboard */; };
 		115588051ED042C000BC6EB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 115588041ED042C000BC6EB7 /* Assets.xcassets */; };
 		115588081ED042C000BC6EB7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 115588061ED042C000BC6EB7 /* LaunchScreen.storyboard */; };
-		115588131ED042C000BC6EB7 /* TextWikiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115588121ED042C000BC6EB7 /* TextWikiTests.swift */; };
 		1300C08A02F4F4661C6D8B5E /* ApplicationModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FD36F444DC24034F362183 /* ApplicationModuleFactory.swift */; };
 		14EF26B704C36F9A1F238B9B /* ApplicationViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3E43CB8F7C137A15A6CA50 /* ApplicationViewOutput.swift */; };
 		152FA5BF700A180AD1CB8E9E /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93E9BF4E55AEC9FFDA4CA02 /* SideMenuViewController.swift */; };
@@ -115,15 +121,17 @@
 		0BC64C58A1D6AA5BA2F96760 /* ApplicationPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ApplicationPresenter.swift; sourceTree = "<group>"; };
 		0CF37805AA60B24757CBC700 /* SideMenuInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SideMenuInteractorInput.swift; sourceTree = "<group>"; };
 		0E347F0266E411EC4D7E4A8D /* WikiTextPresenterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WikiTextPresenterTests.swift; sourceTree = "<group>"; };
+		115098D51ED9862C00752602 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		115098D81ED986C200752602 /* ParsedObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParsedObject.swift; sourceTree = "<group>"; };
+		115098DB1ED9870300752602 /* VimwikiParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VimwikiParser.swift; sourceTree = "<group>"; };
+		115098DE1ED9925500752602 /* WikiTextViewTextStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WikiTextViewTextStyle.swift; sourceTree = "<group>"; };
+		115098E21ED9A8A600752602 /* NSRangeExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSRangeExtension.swift; sourceTree = "<group>"; };
 		115587FA1ED042C000BC6EB7 /* TextWiki.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TextWiki.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		115587FD1ED042C000BC6EB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		115587FF1ED042C000BC6EB7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		115588021ED042C000BC6EB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		115588041ED042C000BC6EB7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		115588071ED042C000BC6EB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		115588091ED042C000BC6EB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1155880E1ED042C000BC6EB7 /* TextWikiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TextWikiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		115588121ED042C000BC6EB7 /* TextWikiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextWikiTests.swift; sourceTree = "<group>"; };
 		115588141ED042C000BC6EB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		181BA6726F7747FE6DDC725E /* SideMenuRouterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SideMenuRouterTests.swift; sourceTree = "<group>"; };
 		1A0F33F19CB588A40F9DFCE5 /* WikiTextRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WikiTextRouter.swift; sourceTree = "<group>"; };
@@ -203,6 +211,32 @@
 			path = Interactor;
 			sourceTree = "<group>";
 		};
+		115098D31ED985D000752602 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				115098D41ED985E600752602 /* Parser */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		115098D41ED985E600752602 /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				115098D81ED986C200752602 /* ParsedObject.swift */,
+				115098D51ED9862C00752602 /* Parser.swift */,
+				115098DB1ED9870300752602 /* VimwikiParser.swift */,
+			);
+			path = Parser;
+			sourceTree = "<group>";
+		};
+		115098E11ED9A88600752602 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				115098E21ED9A8A600752602 /* NSRangeExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		115587F11ED042C000BC6EB7 = {
 			isa = PBXGroup;
 			children = (
@@ -226,12 +260,11 @@
 		115587FC1ED042C000BC6EB7 /* TextWiki */ = {
 			isa = PBXGroup;
 			children = (
+				115588091ED042C000BC6EB7 /* Info.plist */,
 				115587FD1ED042C000BC6EB7 /* AppDelegate.swift */,
-				115587FF1ED042C000BC6EB7 /* ViewController.swift */,
-				115588011ED042C000BC6EB7 /* Main.storyboard */,
 				115588041ED042C000BC6EB7 /* Assets.xcassets */,
 				115588061ED042C000BC6EB7 /* LaunchScreen.storyboard */,
-				115588091ED042C000BC6EB7 /* Info.plist */,
+				115098D31ED985D000752602 /* Classes */,
 				597BEF3DE1AA2A5493602BA6 /* Modules */,
 			);
 			path = TextWiki;
@@ -240,8 +273,8 @@
 		115588111ED042C000BC6EB7 /* TextWikiTests */ = {
 			isa = PBXGroup;
 			children = (
-				115588121ED042C000BC6EB7 /* TextWikiTests.swift */,
 				115588141ED042C000BC6EB7 /* Info.plist */,
+				115098E11ED9A88600752602 /* Extensions */,
 				6BD436AD07C2D921E4F8A025 /* Modules */,
 			);
 			path = TextWikiTests;
@@ -252,7 +285,6 @@
 			children = (
 				97DC782450463413DE43854F /* SideMenuInteractorTests.swift */,
 			);
-			name = Interactor;
 			path = Interactor;
 			sourceTree = "<group>";
 		};
@@ -262,7 +294,6 @@
 				6B96E4259252277D40197522 /* WikiTextRouterInput.swift */,
 				1A0F33F19CB588A40F9DFCE5 /* WikiTextRouter.swift */,
 			);
-			name = Router;
 			path = Router;
 			sourceTree = "<group>";
 		};
@@ -283,7 +314,6 @@
 				89F44A89C0D5A8B60D869A19 /* Router */,
 				AFDBA5BB98455202BF6C25EF /* Factory */,
 			);
-			name = SideMenu;
 			path = SideMenu;
 			sourceTree = "<group>";
 		};
@@ -292,7 +322,6 @@
 			children = (
 				7E1AA9BB46BEDABA92A4CCF3 /* SideMenuViewTests.swift */,
 			);
-			name = View;
 			path = View;
 			sourceTree = "<group>";
 		};
@@ -301,7 +330,6 @@
 			children = (
 				76DD68FC16ACFF539FC65FDD /* WikiTextRouterTests.swift */,
 			);
-			name = Router;
 			path = Router;
 			sourceTree = "<group>";
 		};
@@ -321,7 +349,6 @@
 				2905E9092577E658C050F3BD /* WikiTextModuleInput.swift */,
 				ED021D633F96CD60E0913C2C /* WikiTextPresenter.swift */,
 			);
-			name = Presenter;
 			path = Presenter;
 			sourceTree = "<group>";
 		};
@@ -331,7 +358,6 @@
 				812AA1C8439744AC59014D64 /* SideMenuModuleInput.swift */,
 				A732A866EEDC947B509165A6 /* SideMenuPresenter.swift */,
 			);
-			name = Presenter;
 			path = Presenter;
 			sourceTree = "<group>";
 		};
@@ -344,7 +370,6 @@
 				EE5DBFDE32367ADE8E8F648B /* Presenter */,
 				5682E49612DA061ED0F5E021 /* Router */,
 			);
-			name = SideMenu;
 			path = SideMenu;
 			sourceTree = "<group>";
 		};
@@ -365,7 +390,6 @@
 			children = (
 				181BA6726F7747FE6DDC725E /* SideMenuRouterTests.swift */,
 			);
-			name = Router;
 			path = Router;
 			sourceTree = "<group>";
 		};
@@ -423,7 +447,6 @@
 				3972E2C6009F182F4033EAE0 /* SideMenuRouterInput.swift */,
 				B34F837018E7E98334458DD1 /* SideMenuRouter.swift */,
 			);
-			name = Router;
 			path = Router;
 			sourceTree = "<group>";
 		};
@@ -432,7 +455,6 @@
 			children = (
 				0E347F0266E411EC4D7E4A8D /* WikiTextPresenterTests.swift */,
 			);
-			name = Presenter;
 			path = Presenter;
 			sourceTree = "<group>";
 		};
@@ -466,7 +488,6 @@
 				8E05AA935EE9A0BB383E7AFC /* Presenter */,
 				375FB13B9323A38B129500B2 /* Router */,
 			);
-			name = WikiText;
 			path = WikiText;
 			sourceTree = "<group>";
 		};
@@ -475,7 +496,6 @@
 			children = (
 				2078ED0D50B5BFEBABDD6AD2 /* WikiTextViewTests.swift */,
 			);
-			name = View;
 			path = View;
 			sourceTree = "<group>";
 		};
@@ -486,7 +506,6 @@
 				42DFB4C1585731762A00C211 /* SideMenuInteractorOutput.swift */,
 				62912FF8E307AEEA42FDD41C /* SideMenuInteractor.swift */,
 			);
-			name = Interactor;
 			path = Interactor;
 			sourceTree = "<group>";
 		};
@@ -503,7 +522,6 @@
 			children = (
 				4975C6B4D46E13893452449A /* SideMenuModuleFactory.swift */,
 			);
-			name = Factory;
 			path = Factory;
 			sourceTree = "<group>";
 		};
@@ -524,7 +542,6 @@
 				D670A31BE952CB4F56BF9FCF /* WikiTextInteractorOutput.swift */,
 				4D17812A4D7173265955B3C0 /* WikiTextInteractor.swift */,
 			);
-			name = Interactor;
 			path = Interactor;
 			sourceTree = "<group>";
 		};
@@ -537,7 +554,6 @@
 				29B2A2C2002B0E1B0AA2CB82 /* Router */,
 				EE2EB7BE11237841D46E2312 /* Factory */,
 			);
-			name = WikiText;
 			path = WikiText;
 			sourceTree = "<group>";
 		};
@@ -547,8 +563,8 @@
 				BFD924EBC8A9AB83973F488D /* WikiTextViewInput.swift */,
 				7572C038C10757A240BB24F5 /* WikiTextViewOutput.swift */,
 				ACC41159ECE9536EFBE89897 /* WikiTextViewController.swift */,
+				115098DE1ED9925500752602 /* WikiTextViewTextStyle.swift */,
 			);
-			name = View;
 			path = View;
 			sourceTree = "<group>";
 		};
@@ -566,7 +582,6 @@
 			children = (
 				2A502F12A0AD75DA5E9882D7 /* WikiTextInteractorTests.swift */,
 			);
-			name = Interactor;
 			path = Interactor;
 			sourceTree = "<group>";
 		};
@@ -585,7 +600,6 @@
 				324663E8BEFB8D3A22E101C6 /* SideMenuViewOutput.swift */,
 				F93E9BF4E55AEC9FFDA4CA02 /* SideMenuViewController.swift */,
 			);
-			name = View;
 			path = View;
 			sourceTree = "<group>";
 		};
@@ -594,7 +608,6 @@
 			children = (
 				4E5A7DC1FB0A79AA2655C4B6 /* SideMenuModuleFactoryTests.swift */,
 			);
-			name = Factory;
 			path = Factory;
 			sourceTree = "<group>";
 		};
@@ -603,7 +616,6 @@
 			children = (
 				D8080F89F166CA0B85F0F1F1 /* WikiTextModuleFactory.swift */,
 			);
-			name = Factory;
 			path = Factory;
 			sourceTree = "<group>";
 		};
@@ -612,7 +624,6 @@
 			children = (
 				93346CFDBE90D3F43EBA876F /* SideMenuPresenterTests.swift */,
 			);
-			name = Presenter;
 			path = Presenter;
 			sourceTree = "<group>";
 		};
@@ -621,7 +632,6 @@
 			children = (
 				9A3F95B8A9175B812B6D266D /* WikiTextModuleFactoryTests.swift */,
 			);
-			name = Factory;
 			path = Factory;
 			sourceTree = "<group>";
 		};
@@ -726,7 +736,6 @@
 			files = (
 				115588081ED042C000BC6EB7 /* LaunchScreen.storyboard in Resources */,
 				115588051ED042C000BC6EB7 /* Assets.xcassets in Resources */,
-				115588031ED042C000BC6EB7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -837,7 +846,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				115588001ED042C000BC6EB7 /* ViewController.swift in Sources */,
 				115587FE1ED042C000BC6EB7 /* AppDelegate.swift in Sources */,
 				A0C0B9C6E0592CEDFF67E9FE /* ApplicationViewInput.swift in Sources */,
 				291882FEEBC5A23260A70A18 /* ApplicationViewOutput.swift in Sources */,
@@ -847,6 +855,7 @@
 				03231BCB8AB7C760C4B8D149 /* ApplicationInteractorInput.swift in Sources */,
 				72DB5F36405410766B1BFB2F /* ApplicationInteractorOutput.swift in Sources */,
 				C352697689A5EF347F22823C /* ApplicationInteractor.swift in Sources */,
+				115098DC1ED9870300752602 /* VimwikiParser.swift in Sources */,
 				DC2D2A135B19E565AEF8FDE2 /* ApplicationRouterInput.swift in Sources */,
 				2D556A27325BFA674D1E7C6F /* ApplicationRouter.swift in Sources */,
 				1300C08A02F4F4661C6D8B5E /* ApplicationModuleFactory.swift in Sources */,
@@ -860,15 +869,18 @@
 				A11AFE1EAD2817476181636B /* SideMenuInteractor.swift in Sources */,
 				920BB6DCFDD58CB639494350 /* SideMenuRouterInput.swift in Sources */,
 				F537158D3C632BDA57E3715B /* SideMenuRouter.swift in Sources */,
+				115098D91ED986C200752602 /* ParsedObject.swift in Sources */,
 				8A851FFF8BF720793912EE15 /* SideMenuModuleFactory.swift in Sources */,
 				B58C86EE05AC446E1C4EB0EE /* WikiTextViewInput.swift in Sources */,
 				4FF5C7DA4AAD9A3B77DBB49F /* WikiTextViewOutput.swift in Sources */,
 				22740D376A7AD50118087B3D /* WikiTextViewController.swift in Sources */,
 				5CEFD9E95E211E6ECB3CE2D1 /* WikiTextModuleInput.swift in Sources */,
 				D59AAADB825E0FD657CBD7B3 /* WikiTextPresenter.swift in Sources */,
+				115098DF1ED9925500752602 /* WikiTextViewTextStyle.swift in Sources */,
 				DE168D36F256703016DE8E8B /* WikiTextInteractorInput.swift in Sources */,
 				A0CC592AD7D640C0D97BF25E /* WikiTextInteractorOutput.swift in Sources */,
 				1DDEE8AFA1CA2D6E94FC3B1A /* WikiTextInteractor.swift in Sources */,
+				115098D61ED9862C00752602 /* Parser.swift in Sources */,
 				4573A289DD47B3662C775A4B /* WikiTextRouterInput.swift in Sources */,
 				8E7F0B34787E38A06B61DE84 /* WikiTextRouter.swift in Sources */,
 				3AAE0112652D922478D3B9F0 /* WikiTextModuleFactory.swift in Sources */,
@@ -879,7 +891,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				115588131ED042C000BC6EB7 /* TextWikiTests.swift in Sources */,
 				FD561965B148F6827EE9EBAA /* ApplicationViewInput.swift in Sources */,
 				14EF26B704C36F9A1F238B9B /* ApplicationViewOutput.swift in Sources */,
 				23190652320EF3E65909E5CE /* ApplicationViewController.swift in Sources */,
@@ -895,6 +906,7 @@
 				3BA5EC85069368420F21E43C /* ApplicationViewTests.swift in Sources */,
 				73A5875724A99480F9F3C1C6 /* ApplicationInteractorTests.swift in Sources */,
 				C4229F34BFB857572999E6E4 /* ApplicationPresenterTests.swift in Sources */,
+				115098E01ED9925500752602 /* WikiTextViewTextStyle.swift in Sources */,
 				933F1FC4C9B6080B33BAE9BF /* ApplicationRouterTests.swift in Sources */,
 				35F569E53C5386A94B1D13B7 /* SideMenuViewInput.swift in Sources */,
 				F91451C5081F9209BEE18229 /* SideMenuViewOutput.swift in Sources */,
@@ -915,16 +927,20 @@
 				65694E21B07C0FD0F13CD8C2 /* WikiTextViewInput.swift in Sources */,
 				E48C27E1B77E6CFB8EB3A9F1 /* WikiTextViewOutput.swift in Sources */,
 				19275D31A1A22960C4318EEC /* WikiTextViewController.swift in Sources */,
+				115098E31ED9A8A600752602 /* NSRangeExtension.swift in Sources */,
 				20A0AA1FFCCF360B7EF2575B /* WikiTextModuleInput.swift in Sources */,
 				B5C9D445610AB8FA62DC94DD /* WikiTextPresenter.swift in Sources */,
 				419351250FE0657990FF4BEE /* WikiTextInteractorInput.swift in Sources */,
 				AEF28F03AACEF72F5CFBD6BA /* WikiTextInteractorOutput.swift in Sources */,
 				0F9176F8FC8261F1F8979FB7 /* WikiTextInteractor.swift in Sources */,
 				4A279536A2AC9C79FD03B4C9 /* WikiTextRouterInput.swift in Sources */,
+				115098D71ED9862C00752602 /* Parser.swift in Sources */,
+				115098DD1ED9870300752602 /* VimwikiParser.swift in Sources */,
 				A5A221DF8D6CD287F062D318 /* WikiTextRouter.swift in Sources */,
 				175C0CD1A98A411BFAA00267 /* WikiTextModuleFactory.swift in Sources */,
 				93CB47B28971473412049EE9 /* WikiTextModuleFactoryTests.swift in Sources */,
 				7E0AE507F70BFB9F73938CEE /* WikiTextViewTests.swift in Sources */,
+				115098DA1ED986C200752602 /* ParsedObject.swift in Sources */,
 				4DB2327F3D435D959C9BAB15 /* WikiTextInteractorTests.swift in Sources */,
 				907340846B64F1155B04D847 /* WikiTextPresenterTests.swift in Sources */,
 				DFA5E73EE664F4A03941456B /* WikiTextRouterTests.swift in Sources */,
@@ -942,14 +958,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		115588011ED042C000BC6EB7 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				115588021ED042C000BC6EB7 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		115588061ED042C000BC6EB7 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

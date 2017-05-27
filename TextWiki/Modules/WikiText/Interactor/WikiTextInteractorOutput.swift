@@ -9,5 +9,20 @@
 import Foundation
 
 protocol WikiTextInteractorOutput: class {
+    /**
+        Called when wiki file was loaded.
 
+        Parameters:
+          - text: Full text of loaded file.
+     */
+    func didLoadFile(text: String)
+
+    /**
+        Called when parsed objects were updated.
+
+        Parameters:
+          - parsedObjects: new parsed objects.
+          - range: range in which this change did occur.
+     */
+    func didReload(parsedObjects: [ParsedObject], in range: NSRange)
 }

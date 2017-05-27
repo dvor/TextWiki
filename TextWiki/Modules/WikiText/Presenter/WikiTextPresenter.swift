@@ -6,6 +6,8 @@
 //  Copyright © 2017 Dmytro Vorobiov. All rights reserved.
 //
 
+import Foundation
+
 class WikiTextPresenter {
     weak var view: WikiTextViewInput!
     var interactor: WikiTextInteractorInput!
@@ -18,9 +20,27 @@ extension WikiTextPresenter: WikiTextModuleInput {
 
 extension WikiTextPresenter: WikiTextViewOutput {
     func viewIsReady() {
+        interactor.loadWikiFile()
+    }
 
+    func willProcessEditing(string: String, range editedRange: NSRange, changeInLength delta: Int) {
+        interactor.textWasChanged(in: string, in: editedRange)
     }
 }
 
 extension WikiTextPresenter: WikiTextInteractorOutput {
+    func didLoadFile(text: String) {
+        view.text = text
+    }
+
+    func didReload(parsedObjects: [ParsedObject], in range: NSRange) {
+        let styles: [WikiTextViewTextStyle] = parsedObjects.map {
+            switch $0.type {
+                case .link:
+                    return WikiTextViewTextStyle(range: $0.range, color: .red)
+            }
+        }
+
+        view.set(styles: styles, in: range)
+    }
 }

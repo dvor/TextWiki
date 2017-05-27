@@ -25,6 +25,7 @@ class ApplicationViewController: LGSideMenuController {
         super.viewDidLoad()
 
         swipeGestureArea = .full
+        leftViewPresentationStyle = .slideBelow
 
         if let output = output {
             // LGSideMenuController loads view in init method when output is not ready yet
