@@ -19,6 +19,7 @@
 		115098DD1ED9870300752602 /* VimwikiParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115098DB1ED9870300752602 /* VimwikiParser.swift */; };
 		115098DF1ED9925500752602 /* WikiTextViewTextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115098DE1ED9925500752602 /* WikiTextViewTextStyle.swift */; };
 		115098E01ED9925500752602 /* WikiTextViewTextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115098DE1ED9925500752602 /* WikiTextViewTextStyle.swift */; };
+		115098E31ED9A8A600752602 /* NSRangeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115098E21ED9A8A600752602 /* NSRangeExtension.swift */; };
 		115587FE1ED042C000BC6EB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115587FD1ED042C000BC6EB7 /* AppDelegate.swift */; };
 		115588051ED042C000BC6EB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 115588041ED042C000BC6EB7 /* Assets.xcassets */; };
 		115588081ED042C000BC6EB7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 115588061ED042C000BC6EB7 /* LaunchScreen.storyboard */; };
@@ -124,6 +125,7 @@
 		115098D81ED986C200752602 /* ParsedObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParsedObject.swift; sourceTree = "<group>"; };
 		115098DB1ED9870300752602 /* VimwikiParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VimwikiParser.swift; sourceTree = "<group>"; };
 		115098DE1ED9925500752602 /* WikiTextViewTextStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WikiTextViewTextStyle.swift; sourceTree = "<group>"; };
+		115098E21ED9A8A600752602 /* NSRangeExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSRangeExtension.swift; sourceTree = "<group>"; };
 		115587FA1ED042C000BC6EB7 /* TextWiki.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TextWiki.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		115587FD1ED042C000BC6EB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		115588041ED042C000BC6EB7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -227,6 +229,14 @@
 			path = Parser;
 			sourceTree = "<group>";
 		};
+		115098E11ED9A88600752602 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				115098E21ED9A8A600752602 /* NSRangeExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		115587F11ED042C000BC6EB7 = {
 			isa = PBXGroup;
 			children = (
@@ -264,6 +274,7 @@
 			isa = PBXGroup;
 			children = (
 				115588141ED042C000BC6EB7 /* Info.plist */,
+				115098E11ED9A88600752602 /* Extensions */,
 				6BD436AD07C2D921E4F8A025 /* Modules */,
 			);
 			path = TextWikiTests;
@@ -916,6 +927,7 @@
 				65694E21B07C0FD0F13CD8C2 /* WikiTextViewInput.swift in Sources */,
 				E48C27E1B77E6CFB8EB3A9F1 /* WikiTextViewOutput.swift in Sources */,
 				19275D31A1A22960C4318EEC /* WikiTextViewController.swift in Sources */,
+				115098E31ED9A8A600752602 /* NSRangeExtension.swift in Sources */,
 				20A0AA1FFCCF360B7EF2575B /* WikiTextModuleInput.swift in Sources */,
 				B5C9D445610AB8FA62DC94DD /* WikiTextPresenter.swift in Sources */,
 				419351250FE0657990FF4BEE /* WikiTextInteractorInput.swift in Sources */,

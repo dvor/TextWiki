@@ -10,12 +10,14 @@ import XCTest
 
 class WikiTextInteractorTests: XCTestCase {
     var interactor: WikiTextInteractor!
-    var output: WikiTextInteractorOutput!
+    var output: MockPresenter!
+    var parser: Parser!
 
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
-        interactor = WikiTextInteractor()
+        parser = MockParser()
+        interactor = WikiTextInteractor(parser: parser)
 
         output = MockPresenter()
         interactor.output = output
@@ -28,11 +30,38 @@ class WikiTextInteractorTests: XCTestCase {
         super.tearDown()
     }
 
+    func testTextWasChanged() {
+        // when
+        interactor.textWasChanged(in: "123", in: NSRange(location: 1, length: 1))
+
+        // then
+        XCTAssertEqual(output.didReloadParsedObjects.count, 1)
+        XCTAssertEqual(output.didReloadParsedObjects[0].type, .link)
+        XCTAssertEqual(output.didReloadParsedObjects[0].range, NSRange(location: 0, length: 3))
+    }
+}
+
+extension WikiTextInteractorTests {
     class MockPresenter: WikiTextInteractorOutput {
+        var didReloadParsedObjects: [ParsedObject]!
+
         func didLoadFile(text: String) {
         }
 
         func didReload(parsedObjects: [ParsedObject], in range: NSRange) {
+            didReloadParsedObjects = parsedObjects
+        }
+    }
+
+    class MockParser: Parser {
+        func parse(string: String, range: NSRange) -> [ParsedObject] {
+            if string == "123" && range == NSRange(location: 0, length: 3) {
+                return [
+                    ParsedObject(type: .link, range: range)
+                ]
+            }
+
+            return [ParsedObject]()
         }
     }
 }
