@@ -9,6 +9,17 @@
 import Foundation
 
 protocol WikiTextInteractorInput {
+    /**
+        Load module's wiki file.
+     */
     func loadWikiFile()
-    func reloadParsedObjects(in string: String, minimalRange: NSRange)
+
+    /**
+        Notify that text in given range was changed.
+
+        Parameters:
+          - string: String that was changed.
+          - changedRange: range in which changes occured.
+     */
+    func textWasChanged(in string: String, in changedRange: NSRange)
 }

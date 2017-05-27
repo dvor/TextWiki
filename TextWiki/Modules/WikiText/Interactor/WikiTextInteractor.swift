@@ -49,8 +49,8 @@ extension WikiTextInteractor: WikiTextInteractorInput {
         output.didLoadFile(text: text)
     }
 
-    func reloadParsedObjects(in string: String, minimalRange: NSRange) {
-        let paragraphRange = (string as NSString).paragraphRange(for: minimalRange)
+    func textWasChanged(in string: String, in changedRange: NSRange) {
+        let paragraphRange = (string as NSString).paragraphRange(for: changedRange)
 
         let objects = parser.parse(string: string, range: paragraphRange)
 

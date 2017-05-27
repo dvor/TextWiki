@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// Parser for vimwiki syntax. See https://github.com/vimwiki/vimwiki
 class VimwikiParser: Parser {
     func parse(string: String, range: NSRange) -> [ParsedObject] {
         let pattern = "\\[\\[.*\\]\\]"

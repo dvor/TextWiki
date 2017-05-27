@@ -9,6 +9,9 @@
 import UIKit
 
 struct WikiTextViewTextStyle {
+    /// Range on which style should be applied
     let range: NSRange
+
+    /// Color to use.
     let color: UIColor
 }

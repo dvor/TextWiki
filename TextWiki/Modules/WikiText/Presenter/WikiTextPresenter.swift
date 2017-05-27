@@ -24,7 +24,7 @@ extension WikiTextPresenter: WikiTextViewOutput {
     }
 
     func willProcessEditing(string: String, range editedRange: NSRange, changeInLength delta: Int) {
-        interactor.reloadParsedObjects(in: string, minimalRange: editedRange)
+        interactor.textWasChanged(in: string, in: editedRange)
     }
 }
 

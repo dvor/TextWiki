@@ -14,5 +14,7 @@ struct ParsedObject {
     }
 
     let type: ObjectType
+
+    /// Range of object in the text
     let range: NSRange
 }
