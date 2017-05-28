@@ -11,6 +11,7 @@ import Foundation
 class WikiTextInteractor {
     weak var output: WikiTextInteractorOutput!
 
+    fileprivate var text = ""
     fileprivate let parser: Parser
 
     init(parser: Parser = VimwikiParser()) {
@@ -20,7 +21,7 @@ class WikiTextInteractor {
 
 extension WikiTextInteractor: WikiTextInteractorInput {
     func loadWikiFile() {
-        let text =
+        text =
 "= Header1 =\n" +
 "== Header2 ==\n" +
 "=== Header3 ===\n" +
@@ -50,10 +51,28 @@ extension WikiTextInteractor: WikiTextInteractorInput {
     }
 
     func textWasChanged(in string: String, in changedRange: NSRange) {
+        text = string
         let paragraphRange = (string as NSString).paragraphRange(for: changedRange)
 
         let objects = parser.parse(string: string, range: paragraphRange)
 
         output.didReload(parsedObjects: objects, in: paragraphRange)
+    }
+
+    func positionWasSelected(_ position: Int) {
+        let nsString = (text as NSString)
+
+        let range = nsString.paragraphRange(for: NSRange(location: position, length: 0))
+        let objects = parser.parse(string: text, range: range)
+
+        for object in objects {
+            if object.range.contains(position: position) {
+                switch object.type {
+                    case .link:
+                        let filePath = nsString.substring(with: object.range)
+                        output.open(wikiFile: filePath)
+                }
+            }
+        }
     }
 }

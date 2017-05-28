@@ -22,4 +22,12 @@ protocol WikiTextInteractorInput {
           - changedRange: range in which changes occured.
      */
     func textWasChanged(in string: String, in changedRange: NSRange)
+
+    /**
+        Notify that text at given position was selected.
+
+        Parameters:
+          - position: Position that was selected.
+     */
+    func positionWasSelected(_ position: Int)
 }

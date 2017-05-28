@@ -26,6 +26,10 @@ extension WikiTextPresenter: WikiTextViewOutput {
     func willProcessEditing(string: String, range editedRange: NSRange, changeInLength delta: Int) {
         interactor.textWasChanged(in: string, in: editedRange)
     }
+
+    func doubleTap(on position: Int) {
+        interactor.positionWasSelected(position)
+    }
 }
 
 extension WikiTextPresenter: WikiTextInteractorOutput {
@@ -42,5 +46,9 @@ extension WikiTextPresenter: WikiTextInteractorOutput {
         }
 
         view.set(styles: styles, in: range)
+    }
+    func open(wikiFile filePath: String) {
+        view.deselectText()
+        print("--- open \(filePath)")
     }
 }

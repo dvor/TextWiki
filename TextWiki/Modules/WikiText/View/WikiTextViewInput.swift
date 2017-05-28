@@ -20,4 +20,9 @@ protocol WikiTextViewInput: class {
           - range: Range to be updated.
      */
     func set(styles: [WikiTextViewTextStyle], in range: NSRange)
+
+    /**
+        Deselects selected text (if any).
+     */
+    func deselectText()
 }

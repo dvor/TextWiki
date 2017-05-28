@@ -19,7 +19,8 @@
 		115098DD1ED9870300752602 /* VimwikiParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115098DB1ED9870300752602 /* VimwikiParser.swift */; };
 		115098DF1ED9925500752602 /* WikiTextViewTextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115098DE1ED9925500752602 /* WikiTextViewTextStyle.swift */; };
 		115098E01ED9925500752602 /* WikiTextViewTextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115098DE1ED9925500752602 /* WikiTextViewTextStyle.swift */; };
-		115098E31ED9A8A600752602 /* NSRangeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115098E21ED9A8A600752602 /* NSRangeExtension.swift */; };
+		115098E91EDAE15A00752602 /* NSRangeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115098E81EDAE15A00752602 /* NSRangeExtension.swift */; };
+		115098EA1EDAE15A00752602 /* NSRangeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115098E81EDAE15A00752602 /* NSRangeExtension.swift */; };
 		115587FE1ED042C000BC6EB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115587FD1ED042C000BC6EB7 /* AppDelegate.swift */; };
 		115588051ED042C000BC6EB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 115588041ED042C000BC6EB7 /* Assets.xcassets */; };
 		115588081ED042C000BC6EB7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 115588061ED042C000BC6EB7 /* LaunchScreen.storyboard */; };
@@ -125,7 +126,7 @@
 		115098D81ED986C200752602 /* ParsedObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParsedObject.swift; sourceTree = "<group>"; };
 		115098DB1ED9870300752602 /* VimwikiParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VimwikiParser.swift; sourceTree = "<group>"; };
 		115098DE1ED9925500752602 /* WikiTextViewTextStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WikiTextViewTextStyle.swift; sourceTree = "<group>"; };
-		115098E21ED9A8A600752602 /* NSRangeExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSRangeExtension.swift; sourceTree = "<group>"; };
+		115098E81EDAE15A00752602 /* NSRangeExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSRangeExtension.swift; sourceTree = "<group>"; };
 		115587FA1ED042C000BC6EB7 /* TextWiki.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TextWiki.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		115587FD1ED042C000BC6EB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		115588041ED042C000BC6EB7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -229,10 +230,10 @@
 			path = Parser;
 			sourceTree = "<group>";
 		};
-		115098E11ED9A88600752602 /* Extensions */ = {
+		115098E41EDADE6500752602 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				115098E21ED9A8A600752602 /* NSRangeExtension.swift */,
+				115098E81EDAE15A00752602 /* NSRangeExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -265,6 +266,7 @@
 				115588041ED042C000BC6EB7 /* Assets.xcassets */,
 				115588061ED042C000BC6EB7 /* LaunchScreen.storyboard */,
 				115098D31ED985D000752602 /* Classes */,
+				115098E41EDADE6500752602 /* Extensions */,
 				597BEF3DE1AA2A5493602BA6 /* Modules */,
 			);
 			path = TextWiki;
@@ -274,7 +276,6 @@
 			isa = PBXGroup;
 			children = (
 				115588141ED042C000BC6EB7 /* Info.plist */,
-				115098E11ED9A88600752602 /* Extensions */,
 				6BD436AD07C2D921E4F8A025 /* Modules */,
 			);
 			path = TextWikiTests;
@@ -875,6 +876,7 @@
 				4FF5C7DA4AAD9A3B77DBB49F /* WikiTextViewOutput.swift in Sources */,
 				22740D376A7AD50118087B3D /* WikiTextViewController.swift in Sources */,
 				5CEFD9E95E211E6ECB3CE2D1 /* WikiTextModuleInput.swift in Sources */,
+				115098E91EDAE15A00752602 /* NSRangeExtension.swift in Sources */,
 				D59AAADB825E0FD657CBD7B3 /* WikiTextPresenter.swift in Sources */,
 				115098DF1ED9925500752602 /* WikiTextViewTextStyle.swift in Sources */,
 				DE168D36F256703016DE8E8B /* WikiTextInteractorInput.swift in Sources */,
@@ -927,7 +929,7 @@
 				65694E21B07C0FD0F13CD8C2 /* WikiTextViewInput.swift in Sources */,
 				E48C27E1B77E6CFB8EB3A9F1 /* WikiTextViewOutput.swift in Sources */,
 				19275D31A1A22960C4318EEC /* WikiTextViewController.swift in Sources */,
-				115098E31ED9A8A600752602 /* NSRangeExtension.swift in Sources */,
+				115098EA1EDAE15A00752602 /* NSRangeExtension.swift in Sources */,
 				20A0AA1FFCCF360B7EF2575B /* WikiTextModuleInput.swift in Sources */,
 				B5C9D445610AB8FA62DC94DD /* WikiTextPresenter.swift in Sources */,
 				419351250FE0657990FF4BEE /* WikiTextInteractorInput.swift in Sources */,
