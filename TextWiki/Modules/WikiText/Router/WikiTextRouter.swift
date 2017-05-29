@@ -6,6 +6,14 @@
 //  Copyright © 2017 Dmytro Vorobiov. All rights reserved.
 //
 
-class WikiTextRouter: WikiTextRouterInput {
+import UIKit
 
+class WikiTextRouter: WikiTextRouterInput {
+    weak var viewController: UIViewController?
+
+    func showWikiModule(wikiFile filePath: String) {
+        let (_, controller) = WikiTextModuleFactory.create()
+
+        viewController?.navigationController?.pushViewController(controller, animated: true)
+    }
 }

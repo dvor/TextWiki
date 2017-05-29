@@ -25,4 +25,6 @@ protocol WikiTextInteractorOutput: class {
           - range: range in which this change did occur.
      */
     func didReload(parsedObjects: [ParsedObject], in range: NSRange)
+
+    func open(wikiFile filePath: String)
 }

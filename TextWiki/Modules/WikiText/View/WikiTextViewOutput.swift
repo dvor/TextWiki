@@ -21,4 +21,12 @@ protocol WikiTextViewOutput {
           - delta: The length delta for the editing changes.
      */
     func willProcessEditing(string: String, range editedRange: NSRange, changeInLength delta: Int)
+
+    /**
+        Sent when user double taps on some text.
+
+        Parameters:
+          - position: Tapped position in text.
+     */
+    func doubleTap(on position: Int)
 }

@@ -52,6 +52,14 @@ class WikiTextPresenterTest: XCTestCase {
         XCTAssertEqual(interactor.textWasChangedRange, range)
     }
 
+    func testDoubleTap() {
+        // when
+        presenter.doubleTap(on: 5)
+
+        // then
+        XCTAssertEqual(interactor.positionWasSelectedPosition, 5)
+    }
+
     func testDidLoadFile() {
         // when
         presenter.didLoadFile(text: "some text")
@@ -83,6 +91,15 @@ class WikiTextPresenterTest: XCTestCase {
 
         XCTAssertEqual(view.setStylesRange, range)
     }
+
+    func testOpenWikiFile() {
+        // when
+        presenter.open(wikiFile: "some/path")
+
+        // then
+        XCTAssertTrue(view.deselectTestDone)
+        XCTAssertEqual(router.showWikiModuleFilePath, "some/path")
+    }
 }
 
 extension WikiTextPresenterTest {
@@ -90,6 +107,7 @@ extension WikiTextPresenterTest {
         var didLoadFileString = false
         var textWasChangedString: String!
         var textWasChangedRange: NSRange!
+        var positionWasSelectedPosition: Int!
 
         func loadWikiFile() {
             didLoadFileString = true
@@ -99,10 +117,18 @@ extension WikiTextPresenterTest {
             textWasChangedString = string
             textWasChangedRange = changedRange
         }
+
+        func positionWasSelected(_ position: Int) {
+            positionWasSelectedPosition = position
+        }
     }
 
     class MockRouter: WikiTextRouterInput {
+        var showWikiModuleFilePath: String!
 
+        func showWikiModule(wikiFile filePath: String) {
+            showWikiModuleFilePath = filePath
+        }
     }
 
     class MockViewController: WikiTextViewInput {
@@ -111,9 +137,15 @@ extension WikiTextPresenterTest {
         var setStyles: [WikiTextViewTextStyle]!
         var setStylesRange: NSRange!
 
+        var deselectTestDone = false
+
         func set(styles: [WikiTextViewTextStyle], in range: NSRange) {
             setStyles = styles
             setStylesRange = range
+        }
+
+        func deselectText() {
+            deselectTestDone = true
         }
     }
 }

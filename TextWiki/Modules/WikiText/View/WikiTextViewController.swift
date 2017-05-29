@@ -39,20 +39,7 @@ class WikiTextViewController: UIViewController {
         installConstraints()
 
         output.viewIsReady()
-
-
-        // let recognizer = UITapGestureRecognizer(target: self, action: #selector(qqq(recognizer:)))
-        // recognizer.numberOfTapsRequired = 1
-        // textView.addGestureRecognizer(recognizer)
     }
-
-    // func qqq(recognizer: UITapGestureRecognizer) {
-    //     var location = recognizer.location(in: textView)
-    //     location.y += textView.contentOffset.y
-
-    //     let tapPosition = textView.closestPosition(to: location)
-    //     print(tapPosition)
-    // }
 }
 
 extension WikiTextViewController: WikiTextViewInput  {
@@ -72,6 +59,26 @@ extension WikiTextViewController: WikiTextViewInput  {
             textView.textStorage.addAttribute(NSForegroundColorAttributeName, value: style.color, range: style.range)
         }
     }
+
+    func deselectText() {
+        textView.selectedTextRange = nil
+    }
+}
+
+// Gesture recognizers
+extension WikiTextViewController {
+    func tappedOnTextView(recognizer: UITapGestureRecognizer) {
+        var location = recognizer.location(in: textView)
+        location.y += textView.contentOffset.y + textView.contentInset.top
+
+        guard let position = textView.closestPosition(to: location) else {
+            return
+        }
+
+        let offset = textView.offset(from: textView.beginningOfDocument, to: position)
+
+        output.doubleTap(on: offset)
+    }
 }
 
 // Notifications
@@ -82,6 +89,14 @@ extension WikiTextViewController {
 
     func keyboardWillHide(notification: Notification) {
         handleKeyboardNotification(notification, willShow: false)
+    }
+}
+
+extension WikiTextViewController: UIGestureRecognizerDelegate
+{
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer,
+            shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        return true
     }
 }
 
@@ -100,6 +115,11 @@ extension WikiTextViewController {
         textView.textStorage.delegate = self
         textView.font = UIFont(name: "Menlo-Regular", size: 18.0)
         view.addSubview(textView)
+
+        let recognizer = UITapGestureRecognizer(target: self, action: #selector(tappedOnTextView(recognizer:)))
+        recognizer.numberOfTapsRequired = 2
+        recognizer.delegate = self
+        textView.addGestureRecognizer(recognizer)
     }
 
     func installConstraints() {
