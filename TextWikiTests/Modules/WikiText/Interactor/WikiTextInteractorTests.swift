@@ -30,6 +30,14 @@ class WikiTextInteractorTests: XCTestCase {
         super.tearDown()
     }
 
+    func testLoadWikiFile() {
+        // when
+        interactor.loadWikiFile()
+
+        // then
+        XCTAssertNotNil(output.didLoadFileText)
+    }
+
     func testTextWasChanged() {
         // when
         interactor.textWasChanged(in: "123", in: NSRange(location: 1, length: 1))
@@ -43,9 +51,11 @@ class WikiTextInteractorTests: XCTestCase {
 
 extension WikiTextInteractorTests {
     class MockPresenter: WikiTextInteractorOutput {
+        var didLoadFileText: String!
         var didReloadParsedObjects: [ParsedObject]!
 
         func didLoadFile(text: String) {
+            didLoadFileText = text
         }
 
         func didReload(parsedObjects: [ParsedObject], in range: NSRange) {
