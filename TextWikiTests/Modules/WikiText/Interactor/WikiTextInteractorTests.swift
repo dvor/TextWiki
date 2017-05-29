@@ -51,6 +51,9 @@ extension WikiTextInteractorTests {
         func didReload(parsedObjects: [ParsedObject], in range: NSRange) {
             didReloadParsedObjects = parsedObjects
         }
+
+        func open(wikiFile filePath: String) {
+        }
     }
 
     class MockParser: Parser {

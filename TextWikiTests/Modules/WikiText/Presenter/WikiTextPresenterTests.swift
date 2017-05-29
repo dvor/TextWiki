@@ -99,10 +99,14 @@ extension WikiTextPresenterTest {
             textWasChangedString = string
             textWasChangedRange = changedRange
         }
+
+        func positionWasSelected(_ position: Int) {
+        }
     }
 
     class MockRouter: WikiTextRouterInput {
-
+        func showWikiModule(wikiFile filePath: String) {
+        }
     }
 
     class MockViewController: WikiTextViewInput {
@@ -114,6 +118,9 @@ extension WikiTextPresenterTest {
         func set(styles: [WikiTextViewTextStyle], in range: NSRange) {
             setStyles = styles
             setStylesRange = range
+        }
+
+        func deselectText() {
         }
     }
 }
