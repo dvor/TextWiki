@@ -13,6 +13,7 @@ struct WikiTextModuleFactory {
         let viewController = WikiTextViewController()
 
         let router = WikiTextRouter()
+        router.viewController = viewController
 
         let presenter = WikiTextPresenter()
         presenter.view = viewController

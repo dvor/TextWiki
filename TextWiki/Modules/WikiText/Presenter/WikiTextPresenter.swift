@@ -47,8 +47,9 @@ extension WikiTextPresenter: WikiTextInteractorOutput {
 
         view.set(styles: styles, in: range)
     }
+
     func open(wikiFile filePath: String) {
         view.deselectText()
-        print("--- open \(filePath)")
+        router.showWikiModule(wikiFile: filePath)
     }
 }
