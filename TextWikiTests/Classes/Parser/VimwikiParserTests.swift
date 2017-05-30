@@ -23,132 +23,62 @@ class VimwikiParserTest: XCTestCase {
     }
 
     func testEmptyText() {
-        let objects = parser.parse(string: "", range: range(0, 0))
-        XCTAssertEqual(objects.count, 0)
+        run("", [ParsedObject]())
+    }
+
+    func testTypefaces() {
+        run("*bold*",        [ pObject(.bold,        range(0, 6)) ])
+        run("_italic_",      [ pObject(.italic,      range(0, 8)) ])
+        run("~~strikeout~~", [ pObject(.strikeout,   range(0, 13)) ])
+        run("`inline code`", [ pObject(.inlineCode,  range(0, 13)) ])
+        run("super^script^", [ pObject(.superScript, range(5, 8)) ])
+        run("sup,,script,,", [ pObject(.subScript,   range(3, 10)) ])
     }
 
     func testSingleWikiLink() {
-        var string = "[[link]]"
-        var objects = parser.parse(string: string, range: range(0, string.characters.count))
-        XCTAssertEqual(objects.count, 1)
-        XCTAssertEqual(objects[0], pObjects(.link, range(0, 8)))
+        run("[[link]]",                            [ pObject(.link, range(0, 8)) ])
+        run("[[this is a link]]",                  [ pObject(.link, range(0, 18)) ])
+        run("[[this is a link|With description]]", [ pObject(.link, range(0, 35)) ])
+        run("[[../index]]",                        [ pObject(.link, range(0, 12)) ])
+        run("[[/index]]",                          [ pObject(.link, range(0, 10)) ])
+        run("[[a subdirectory/|Other files]]",     [ pObject(.link, range(0, 31)) ])
 
-        string = "[[this is a link]]"
-        objects = parser.parse(string: string, range: range(0, string.characters.count))
-        XCTAssertEqual(objects.count, 1)
-        XCTAssertEqual(objects[0], pObjects(.link, range(0, 18)))
+        run("[[wiki1:This is a link]]",                                [ pObject(.link, range(0, 24)) ])
+        run("[[wiki1:This is a link source|Description of the link]]", [ pObject(.link, range(0, 55)) ])
 
-        string = "[[this is a link|With description]]"
-        objects = parser.parse(string: string, range: range(0, string.characters.count))
-        XCTAssertEqual(objects.count, 1)
-        XCTAssertEqual(objects[0], pObjects(.link, range(0, 35)))
+        run("[[diary:2012-03-05]]",                      [ pObject(.link, range(0, 20)) ])
+        run("[[../../diary/2012-03-05]]",                [ pObject(.link, range(0, 26)) ])
+        run("[[Todo List#Tomorrow|Tasks for tomorrow]]", [ pObject(.link, range(0, 41)) ])
+        run("[[#Tomorrow]]",                             [ pObject(.link, range(0, 13)) ])
+        run("[[#Tomorrow]]",                             [ pObject(.link, range(0, 13)) ])
 
-        string = "[[../index]]"
-        objects = parser.parse(string: string, range: range(0, string.characters.count))
-        XCTAssertEqual(objects.count, 1)
-        XCTAssertEqual(objects[0], pObjects(.link, range(0, 12)))
+        run("[[file:/home/somebody/a/b/c/music.mp3]]",            [ pObject(.link, range(0, 39)) ])
+        run("[[file:C:/Users/somebody/d/e/f/music.mp3]]",         [ pObject(.link, range(0, 42)) ])
+        run("[[file:~/a/b/c/music.mp3]]",                         [ pObject(.link, range(0, 26)) ])
+        run("[[file:../assets/data.csv|Important Data]]",         [ pObject(.link, range(0, 42)) ])
+        run("[[local:C:/Users/somebody/d/e/f/music.mp3]]",        [ pObject(.link, range(0, 43)) ])
+        run("[[file:/home/user/documents/|Link to a directory]]", [ pObject(.link, range(0, 50)) ])
 
-        string = "[[/index]]"
-        objects = parser.parse(string: string, range: range(0, string.characters.count))
-        XCTAssertEqual(objects.count, 1)
-        XCTAssertEqual(objects[0], pObjects(.link, range(0, 10)))
-
-        string = "[[a subdirectory/|Other files]]"
-        objects = parser.parse(string: string, range: range(0, string.characters.count))
-        XCTAssertEqual(objects.count, 1)
-        XCTAssertEqual(objects[0], pObjects(.link, range(0, 31)))
-
-        string = "[[wiki1:This is a link]]"
-        objects = parser.parse(string: string, range: range(0, string.characters.count))
-        XCTAssertEqual(objects.count, 1)
-        XCTAssertEqual(objects[0], pObjects(.link, range(0, 24)))
-
-        string = "[[wiki1:This is a link source|Description of the link]]"
-        objects = parser.parse(string: string, range: range(0, string.characters.count))
-        XCTAssertEqual(objects.count, 1)
-        XCTAssertEqual(objects[0], pObjects(.link, range(0, 55)))
-
-        string = "[[diary:2012-03-05]]"
-        objects = parser.parse(string: string, range: range(0, string.characters.count))
-        XCTAssertEqual(objects.count, 1)
-        XCTAssertEqual(objects[0], pObjects(.link, range(0, 20)))
-
-        string = "[[../../diary/2012-03-05]]"
-        objects = parser.parse(string: string, range: range(0, string.characters.count))
-        XCTAssertEqual(objects.count, 1)
-        XCTAssertEqual(objects[0], pObjects(.link, range(0, 26)))
-
-        string = "[[Todo List#Tomorrow|Tasks for tomorrow]]"
-        objects = parser.parse(string: string, range: range(0, string.characters.count))
-        XCTAssertEqual(objects.count, 1)
-        XCTAssertEqual(objects[0], pObjects(.link, range(0, 41)))
-
-        string = "[[#Tomorrow]]"
-        objects = parser.parse(string: string, range: range(0, string.characters.count))
-        XCTAssertEqual(objects.count, 1)
-        XCTAssertEqual(objects[0], pObjects(.link, range(0, 13)))
-
-        string = "[[#Tomorrow]]"
-        objects = parser.parse(string: string, range: range(0, string.characters.count))
-        XCTAssertEqual(objects.count, 1)
-        XCTAssertEqual(objects[0], pObjects(.link, range(0, 13)))
-
-        string = "[[file:/home/somebody/a/b/c/music.mp3]]"
-        objects = parser.parse(string: string, range: range(0, string.characters.count))
-        XCTAssertEqual(objects.count, 1)
-        XCTAssertEqual(objects[0], pObjects(.link, range(0, 39)))
-
-        string = "[[file:C:/Users/somebody/d/e/f/music.mp3]]"
-        objects = parser.parse(string: string, range: range(0, string.characters.count))
-        XCTAssertEqual(objects.count, 1)
-        XCTAssertEqual(objects[0], pObjects(.link, range(0, 42)))
-
-        string = "[[file:~/a/b/c/music.mp3]]"
-        objects = parser.parse(string: string, range: range(0, string.characters.count))
-        XCTAssertEqual(objects.count, 1)
-        XCTAssertEqual(objects[0], pObjects(.link, range(0, 26)))
-
-        string = "[[file:../assets/data.csv|Important Data]]"
-        objects = parser.parse(string: string, range: range(0, string.characters.count))
-        XCTAssertEqual(objects.count, 1)
-        XCTAssertEqual(objects[0], pObjects(.link, range(0, 42)))
-
-        string = "[[local:C:/Users/somebody/d/e/f/music.mp3]]"
-        objects = parser.parse(string: string, range: range(0, string.characters.count))
-        XCTAssertEqual(objects.count, 1)
-        XCTAssertEqual(objects[0], pObjects(.link, range(0, 43)))
-
-        string = "[[file:/home/user/documents/|Link to a directory]]"
-        objects = parser.parse(string: string, range: range(0, string.characters.count))
-        XCTAssertEqual(objects.count, 1)
-        XCTAssertEqual(objects[0], pObjects(.link, range(0, 50)))
-
-        string = "[[http://someaddr.com/bigpicture.jpg|{{http://someaddr.com/thumbnail.jpg}}]]"
-        objects = parser.parse(string: string, range: range(0, string.characters.count))
-        XCTAssertEqual(objects.count, 1)
-        XCTAssertEqual(objects[0], pObjects(.link, range(0, 76)))
+        run("[[http://someaddr.com/bigpicture.jpg|{{http://someaddr.com/thumbnail.jpg}}]]", [ pObject(.link, range(0, 76)) ])
     }
 
     func testWikiLinkInAContext() {
-        var string = "link in the [[middle of]] a text"
-        var objects = parser.parse(string: string, range: range(0, string.characters.count))
-        XCTAssertEqual(objects.count, 1)
-        XCTAssertEqual(objects[0], pObjects(.link, range(12, 13)))
-
-        string = "This is [[link 1]] and [[some link 2]]"
-        objects = parser.parse(string: string, range: range(0, string.characters.count))
-        XCTAssertEqual(objects.count, 2)
-        XCTAssertEqual(objects[0], pObjects(.link, range(8, 10)))
-        XCTAssertEqual(objects[1], pObjects(.link, range(23, 15)))
+        run( "link in the [[middle of]] a text",      [ pObject(.link, range(12, 13)) ])
+        run("This is [[link 1]] and [[some link 2]]", [ pObject(.link, range(8, 10)), pObject(.link, range(23, 15)) ])
     }
 }
 
 extension VimwikiParserTest {
+    func run(_ string: String, _ parsedObjects: [ParsedObject]) {
+        let objects = parser.parse(string: string, range: range(0, string.characters.count))
+        XCTAssertEqual(objects, parsedObjects)
+    }
+
     func range(_ location: Int, _ length: Int) -> NSRange {
         return NSRange(location: location, length: length)
     }
 
-    func pObjects(_ type: ParsedObject.ObjectType, _ range: NSRange) -> ParsedObject {
+    func pObject(_ type: ParsedObject.ObjectType, _ range: NSRange) -> ParsedObject {
         return ParsedObject(type: type, range: range)
     }
 }

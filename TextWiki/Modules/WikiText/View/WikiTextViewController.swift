@@ -53,10 +53,40 @@ extension WikiTextViewController: WikiTextViewInput  {
     }
 
     func set(styles: [WikiTextViewTextStyle], in range: NSRange) {
+        let defaultFont = UIFont(name: "Menlo-Regular", size: 18.0)
+        textView.textStorage.addAttribute(NSFontAttributeName, value: defaultFont as Any, range: range)
+
         textView.textStorage.removeAttribute(NSForegroundColorAttributeName, range: range)
+        textView.textStorage.removeAttribute(NSStrikethroughStyleAttributeName, range: range)
+        textView.textStorage.removeAttribute(kCTSuperscriptAttributeName as String, range: range)
 
         for style in styles {
-            textView.textStorage.addAttribute(NSForegroundColorAttributeName, value: style.color, range: style.range)
+            if let color = style.color {
+                textView.textStorage.addAttribute(NSForegroundColorAttributeName, value: color, range: style.range)
+            }
+
+            switch style.type {
+                case .none:
+                    break
+                case .bold:
+                    let font = UIFont(name: "Menlo-Bold", size: 18.0)
+                    textView.textStorage.addAttribute(NSFontAttributeName, value: font as Any, range: style.range)
+                case .italic:
+                    let font = UIFont(name: "Menlo-Italic", size: 18.0)
+                    textView.textStorage.addAttribute(NSFontAttributeName, value: font as Any, range: style.range)
+                case .strikeout:
+                    textView.textStorage.addAttribute(NSStrikethroughStyleAttributeName,
+                                                      value: NSUnderlineStyle.styleSingle.rawValue,
+                                                      range: style.range)
+                case .superScript:
+                    let font = UIFont(name: "Menlo-Regular", size: 14.0)
+                    textView.textStorage.addAttribute(NSFontAttributeName, value: font as Any, range: style.range)
+                    textView.textStorage.addAttribute(kCTSuperscriptAttributeName as String, value: 1, range: style.range)
+                case .subScript:
+                    let font = UIFont(name: "Menlo-Regular", size: 14.0)
+                    textView.textStorage.addAttribute(NSFontAttributeName, value: font as Any, range: style.range)
+                    textView.textStorage.addAttribute(kCTSuperscriptAttributeName as String, value: -1, range: style.range)
+            }
         }
     }
 
@@ -113,7 +143,6 @@ extension WikiTextViewController {
     func createSubviews() {
         textView = UITextView()
         textView.textStorage.delegate = self
-        textView.font = UIFont(name: "Menlo-Regular", size: 18.0)
         view.addSubview(textView)
 
         let recognizer = UITapGestureRecognizer(target: self, action: #selector(tappedOnTextView(recognizer:)))

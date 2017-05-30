@@ -9,9 +9,25 @@
 import UIKit
 
 struct WikiTextViewTextStyle {
-    /// Range on which style should be applied
+    enum TextType {
+        case none
+        case bold
+        case italic
+        case strikeout
+        case superScript
+        case subScript
+    }
+
+    /// Range on which style should be applied.
     let range: NSRange
 
-    /// Color to use.
-    let color: UIColor
+    /// If not set default color would be used.
+    var color: UIColor? = nil
+
+    /// Type of text to be used.
+    var type: TextType = .none
+
+    init(range: NSRange) {
+        self.range = range
+    }
 }

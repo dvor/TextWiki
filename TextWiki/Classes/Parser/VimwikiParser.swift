@@ -11,6 +11,13 @@ import Foundation
 /// Parser for vimwiki syntax. See https://github.com/vimwiki/vimwiki
 class VimwikiParser: Parser {
     let rules: [ParsedObject.ObjectType : NSRegularExpression] = [
+        .bold : regex(from: "\\*.*?\\*"),
+        .italic : regex(from: "\\_.*?\\_"),
+        .strikeout : regex(from: "\\~\\~.*?\\~\\~"),
+        .inlineCode : regex(from: "\\`.*?\\`"),
+        .superScript : regex(from: "\\^.*?\\^"),
+        .subScript : regex(from: "\\,,.*?\\,,"),
+
         .link : regex(from: "\\[\\[.*?\\]\\]"),
     ]
 

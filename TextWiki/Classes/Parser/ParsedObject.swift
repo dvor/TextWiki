@@ -10,6 +10,13 @@ import Foundation
 
 struct ParsedObject {
     enum ObjectType {
+        case bold
+        case italic
+        case strikeout
+        case inlineCode
+        case superScript
+        case subScript
+
         case link
     }
 
