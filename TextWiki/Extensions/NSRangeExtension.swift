@@ -19,3 +19,11 @@ extension NSRange: Equatable {
         return lhs.location == rhs.location && lhs.length == rhs.length
     }
 }
+
+extension NSRange: CustomDebugStringConvertible {
+    public var debugDescription: String {
+        get {
+            return "(\(location), \(length))"
+        }
+    }
+}

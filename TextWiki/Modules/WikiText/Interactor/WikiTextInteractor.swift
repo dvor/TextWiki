@@ -68,6 +68,18 @@ extension WikiTextInteractor: WikiTextInteractorInput {
         for object in objects {
             if object.range.contains(position: position) {
                 switch object.type {
+                    case .bold:
+                        break
+                    case .italic:
+                        break
+                    case .strikeout:
+                        break
+                    case .inlineCode:
+                        break
+                    case .superScript:
+                        break
+                    case .subScript:
+                        break
                     case .link:
                         let filePath = nsString.substring(with: object.range)
                         output.open(wikiFile: filePath)

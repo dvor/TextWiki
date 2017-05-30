@@ -39,10 +39,25 @@ extension WikiTextPresenter: WikiTextInteractorOutput {
 
     func didReload(parsedObjects: [ParsedObject], in range: NSRange) {
         let styles: [WikiTextViewTextStyle] = parsedObjects.map {
+            var style = WikiTextViewTextStyle(range: $0.range)
             switch $0.type {
+                case .bold:
+                    style.type = .bold
+                case .italic:
+                    style.type = .italic
+                case .strikeout:
+                    style.type = .strikeout
+                case .inlineCode:
+                    break
+                case .superScript:
+                    style.type = .superScript
+                case .subScript:
+                    style.type = .subScript
                 case .link:
-                    return WikiTextViewTextStyle(range: $0.range, color: .red)
+                    style.color = .red
             }
+
+            return style
         }
 
         view.set(styles: styles, in: range)
