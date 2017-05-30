@@ -18,3 +18,17 @@ struct ParsedObject {
     /// Range of object in the text
     let range: NSRange
 }
+
+extension ParsedObject: Equatable {
+    public static func ==(lhs: ParsedObject, rhs: ParsedObject) -> Bool {
+        return lhs.type == rhs.type && lhs.range == rhs.range
+    }
+}
+
+extension ParsedObject: CustomDebugStringConvertible {
+    var debugDescription: String {
+        get {
+            return "type: \(type), range: \(range)"
+        }
+    }
+}

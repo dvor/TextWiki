@@ -10,12 +10,23 @@ import Foundation
 
 /// Parser for vimwiki syntax. See https://github.com/vimwiki/vimwiki
 class VimwikiParser: Parser {
-    func parse(string: String, range: NSRange) -> [ParsedObject] {
-        let pattern = "\\[\\[.*\\]\\]"
-        let regex = try! NSRegularExpression(pattern: pattern, options: [])
+    let rules: [ParsedObject.ObjectType : NSRegularExpression] = [
+        .link : regex(from: "\\[\\[.*?\\]\\]"),
+    ]
 
-        return regex.matches(in: string, options: [], range: range).map {
-            ParsedObject(type: .link, range: $0.range)
+    func parse(string: String, range: NSRange) -> [ParsedObject] {
+        var parsedObjects = [ParsedObject]()
+
+        for (type, regex) in rules {
+            parsedObjects += regex.matches(in: string, options: [], range: range).map {
+                ParsedObject(type: type, range: $0.range)
+            }
         }
+
+        return parsedObjects
     }
+}
+
+fileprivate func regex(from pattern: String) -> NSRegularExpression {
+    return try! NSRegularExpression(pattern: pattern, options: [])
 }
